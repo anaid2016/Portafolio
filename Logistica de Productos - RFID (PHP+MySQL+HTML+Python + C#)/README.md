@@ -7,7 +7,6 @@ entregada por el hardware RFID.
 
 
 
-
 Esquema General Arquitectura de Vistas y Funciones
 
 
@@ -37,6 +36,12 @@ Hardware RFID Integrado
 
 
  
+Servicio Integración de Antenas
+
+
+
+
+
 
 
 
