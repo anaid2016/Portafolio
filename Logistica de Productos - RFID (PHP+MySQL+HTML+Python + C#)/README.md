@@ -10,7 +10,7 @@
 Esquema General de Vistas y Funciones
 
 
-![ArquitecturaMacro] (https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP+MySQL+HTML+Python%20+%20C%23)/imagenes/img4.png?raw=true)
+![ArquitecturaMacro](https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP+MySQL+HTML+Python%20+%20C%23)/imagenes/img4.png?raw=true)
 
 
 Requerimientos
