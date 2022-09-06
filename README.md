@@ -3,6 +3,15 @@
 
 ##About Me##
 
+Desarrollador de Software
+Lenguajes: PHP+JavaScript+Python+C#+Java Android
+Framework: Yii2, Laravel, Vue
+Bases de Datos: MySQL, PostgreSQL, Oracle
+Tools: Git,
+Server: Linux Redhat, Ubuntu, IIS Windows
+AWS: Ec2
+
+
 **Indicadores (Mapa OpenStreet + JS)** (Clic aqui para visualizar Demo)
 
 Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores de una empresa con varias sucursales.
