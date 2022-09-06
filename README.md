@@ -3,28 +3,67 @@ Historial de Desarrollo
 
 Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de programación PHP, Python, C#, Java y Javascript con diseño de frontend basico para visualizar utilidad en HTML,CSS.
 
-**Indicadores (Mapa OpenStreet + JS)**
+**Indicadores (Mapa OpenStreet + JS)** (Clic aqui para visualizar Demo)
 
 Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores de una empresa con varias sucursales.
 
 
 
-**Fotovoltaico** (Clic aqui para visualizar Demo)
+**Gestor de Energia Usuario Residencial** (Clic aqui para visualizar Demo)
 
 Objetivo
 
-	- Adquisición de Data en sitio de un equipo inversor Modbus y envio por MQTT.
+	- Adquisición de Data en sitio de un equipo de medida de energia eléctrica Modbus y envio por MQTT.
 	- REST-API para el ingreso de lecturas de usuarios desde el punto de medida (POSTGRESQL).
-	- Interfaz para presentar los datos de generación de un cliente Autogenerador de Energia.
+	- Interfaz para presentar los datos de consumo de Energia al cliente Final.
+	
+GetDataSite
+
+	Lenguajes
+		* Python 2.7.9 
+		* Pao MQTT (https://pypi.org/project/paho-mqtt/)
+		
+	Hardware
+		* Raspberri Pi 4 + Tarjeta de Adquisición de datos para RS485
+		* Equipo de Medida de Energía Electrica con Comunicación Modbus
+		
+	SO
+		* Linux Ubuntu 18
+		
+		
+	Esquema General de Arquitectura
+
+	
+	
+Backend
+	
+	Framework
+		* Yii2 Basic
+		
+	Bases de Datos
+		* PostgreSQL 12
+		
+		
+	REST-API
+		* Insert Data (POST) con Autenticación Baren Token
+		* Select Data (GET)
+		
+			
+
+
+Frontend 
+
+	Framework
+		* Vue
+		
+	
 	
 
+			
+	
+	
 
-**Gestión de Formularios (Yii2)**
-
-
-
-
-**BLE (Android Studio)**
+**BLE (Android Studio)** (Video Funcionalidad)
 
 
 
