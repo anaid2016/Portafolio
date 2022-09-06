@@ -1,0 +1,194 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D74A92C-397E-43A6-B046-49E58BE75CC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFID_INDUSTRIAL</RootNamespace>
+    <AssemblyName>RFID_INDUSTRIAL</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>RFID_INDUSTRIAL</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <DeployDirPrefix>%25CSIDL_PROGRAM_FILES%25</DeployDirPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="MySql.Data.CF, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v2.0\MySql.Data.CF.dll</HintPath>
+    </Reference>
+    <Reference Include="NRfidApi, Version=1.1.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NonStrongNamed\NRfidApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orden.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Orden2.cs" />
+    <Compile Include="Ordenc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ordenc2.cs" />
+    <Compile Include="Ordenes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrdenesC.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\RFID_INDUSTRIAL.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\RFID_INDUSTRIAL.Form2.resources" />
+    <EmbeddedResource Include="obj\Debug\RFID_INDUSTRIAL.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Release\RFID_INDUSTRIAL.Form1.resources" />
+    <EmbeddedResource Include="obj\Release\RFID_INDUSTRIAL.Form2.resources" />
+    <EmbeddedResource Include="obj\Release\RFID_INDUSTRIAL.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\NRfidApi.dll" />
+    <Content Include="bin\Debug\RFID_INDUSTRIAL.exe" />
+    <Content Include="bin\Debug\RFID_INDUSTRIAL.pdb" />
+    <Content Include="bin\Debug\System.Data.dll" />
+    <Content Include="bin\Release\NRfidApi.dll" />
+    <Content Include="bin\Release\RFID_INDUSTRIAL.exe" />
+    <Content Include="bin\Release\RFID_INDUSTRIAL.pdb" />
+    <Content Include="bin\Release\System.Data.dll" />
+    <Content Include="librerias\ATRMUHF.dll" />
+    <Content Include="librerias\CRfidApi.dll" />
+    <Content Include="librerias\HIQ_R1000_SysDriver.dll" />
+    <Content Include="NonStrongNamed\NBarcodeApi.dll" />
+    <Content Include="NonStrongNamed\NBluetoothApi.dll" />
+    <Content Include="NonStrongNamed\NCameraApi.dll" />
+    <Content Include="NonStrongNamed\NGpsApi.dll" />
+    <Content Include="NonStrongNamed\NModemApi.dll" />
+    <Content Include="NonStrongNamed\NRfidApi.dll" />
+    <Content Include="NonStrongNamed\NSysSvcApi.dll" />
+    <Content Include="obj\Debug\RFID_INDUSTRIAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\RFID_INDUSTRIAL.exe" />
+    <Content Include="obj\Debug\RFID_INDUSTRIAL.pdb" />
+    <Content Include="obj\Release\RFID_INDUSTRIAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\RFID_INDUSTRIAL.exe" />
+    <Content Include="obj\Release\RFID_INDUSTRIAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\RFID_INDUSTRIAL.csproj.GenerateResource.Cache" />
+    <None Include="obj\Release\build.force" />
+    <None Include="obj\Release\ResolveAssemblyReference.cache" />
+    <None Include="obj\Release\RFID_INDUSTRIAL.csproj.GenerateResource.Cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\Refactor\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

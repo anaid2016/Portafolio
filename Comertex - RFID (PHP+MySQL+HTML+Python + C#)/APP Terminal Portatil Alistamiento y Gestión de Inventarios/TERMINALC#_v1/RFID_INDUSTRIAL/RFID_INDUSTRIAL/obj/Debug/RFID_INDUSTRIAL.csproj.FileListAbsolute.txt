@@ -1,0 +1,11 @@
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\bin\Debug\RFID_INDUSTRIAL.exe
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\bin\Debug\RFID_INDUSTRIAL.pdb
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.Form1.resources
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.Form2.resources
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.Form3.resources
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.Form4.resources
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.Properties.Resources.resources
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.csproj.GenerateResource.Cache
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.exe
+C:\Users\PuertoRealII\Documents\Visual Studio 2008\Projects\RFID_INDUSTRIAL\RFID_INDUSTRIAL\obj\Debug\RFID_INDUSTRIAL.pdb
