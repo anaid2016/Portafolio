@@ -3,6 +3,31 @@ Historial de Desarrollo
 
 Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de programación PHP, Python, C#, Java y Javascript con diseño de frontend basico para visualizar utilidad en HTML,CSS.
 
+**Indicadores (Mapa OpenStreet + JS)**
+
+Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores de una empresa con varias sucursales.
+
+
+
+**Fotovoltaico** (Clic aqui para visualizar Demo)
+
+Objetivo
+
+	- Adquisición de Data en sitio de un equipo inversor Modbus y envio por MQTT.
+	- REST-API para el ingreso de lecturas de usuarios desde el punto de medida (POSTGRESQL).
+	- Interfaz para presentar los datos de generación de un cliente Autogenerador de Energia.
+	
+
+
+**Gestión de Formularios (Yii2)**
+
+
+
+
+**BLE (Android Studio)**
+
+
+
 
 **Inventario RFID Textiles:**
   
@@ -41,7 +66,6 @@ Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de p
       * Reader Impinj RFID.
       * Impresora ZEBRA RFID.   
 
-**Gestión de Formularios (Yii2)**
 
 
 
@@ -49,18 +73,19 @@ Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de p
 
 
 
-**Fotovoltaico**
-
-
-
-
-**Gestión de Energía**
 
 
 
 
 
-**Indicadores (Mapa OpenStreet + JS)**
+
+
+
+
+
+
+
+
 
 
 
