@@ -1,5 +1,6 @@
 #####################################################################
-#Servicio de Escucha para solicitud cada n segundos de historial de Captura RFID en router impinj
+#Servicio de Escucha para solicitud cada n segundos de historial de Captura RFID en router impinj, se ejecuta a través de cron en linux
+#Este servicio se puede establecer como daemon --- Posible mejora
 #Ip del router: 192.168.1.142 puerto 14150
 ######################################################################
 
