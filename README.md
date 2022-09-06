@@ -12,13 +12,13 @@
 * AWS: Ec2
 
 
-**Indicadores (Mapa OpenStreet + JS)** (Clic aqui para visualizar Demo)
+**Indicadores (Mapa OpenStreet + JS)** ![(Clic aqui para visualizar Demo)](http://18.223.105.203:8086/production/sure)
 
 Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores de una empresa con varias sucursales.
 
 
 
-**Gestor de Energia Usuario Residencial** (Clic aqui para visualizar Demo)
+**Gestor de Energia Usuario Residencial** ![(Clic aqui para visualizar Demo)](http://18.223.105.203:8086/production/sure)
 
 Objetivo
 
@@ -65,11 +65,6 @@ Frontend
 	Framework
 		* Vue
 		
-	
-	
-
-			
-	
 	
 
 **BLE (Android Studio)** (Video Funcionalidad)
