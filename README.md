@@ -4,7 +4,7 @@ Historial de Desarrollo
 Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de programación PHP, Python, C#, Java y Javascript con diseño de frontend basico para visualizar utilidad en HTML,CSS.
 
 
-***Inventario RFID Textiles:  ***
+**Inventario RFID Textiles:**
   
   Objetivo:  Estructurar y desarrollo un sistema para el control de kardex (entrada,salida) para la industria textil que permita validar la eficiencia y eficacia de los protocolos de movimiento de producto por unidades (rollos) y partes de unidad (metros y cm), para la puesta en marcha de las prácticas dentro del laboratorio de logistica.
 
@@ -40,5 +40,31 @@ Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de p
       * Antenas Caja Punto de Venta RFID.
       * Reader Impinj RFID.
       * Impresora ZEBRA RFID.   
+
+**Gestión de Formularios (Yii2)**
+
+
+
+
+
+
+
+**Fotovoltaico**
+
+
+
+
+**Gestión de Energía**
+
+
+
+
+
+**Indicadores (Mapa OpenStreet + JS)**
+
+
+
+
+
 
 
