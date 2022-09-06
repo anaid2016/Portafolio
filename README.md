@@ -46,8 +46,16 @@ GetDataSite
 	
 Backend
 	
+	
+	Lenguajes
+	
 	Framework
 		* Yii2 Basic
+		
+	Servicios MQTT
+	
+		* Rabbit MQTT
+		* Servicio Python de Escucha para recepción y validación de Tramas MQTT
 		
 	Bases de Datos
 		* PostgreSQL 12
