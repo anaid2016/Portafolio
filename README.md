@@ -3,13 +3,13 @@
 
 ##About Me##
 
-Desarrollador de Software
-Lenguajes: PHP+JavaScript+Python+C#+Java Android
-Framework: Yii2, Laravel, Vue
-Bases de Datos: MySQL, PostgreSQL, Oracle
-Tools: Git,
-Server: Linux Redhat, Ubuntu, IIS Windows
-AWS: Ec2
+* Desarrollador de Software
+* Lenguajes: PHP+JavaScript+Python+C#+Java Android
+* Framework: Yii2, Laravel, Vue
+* Bases de Datos: MySQL, PostgreSQL, Oracle
+* Tools: Git,
+* Server: Linux Redhat, Ubuntu, IIS Windows
+* AWS: Ec2
 
 
 **Indicadores (Mapa OpenStreet + JS)** (Clic aqui para visualizar Demo)
