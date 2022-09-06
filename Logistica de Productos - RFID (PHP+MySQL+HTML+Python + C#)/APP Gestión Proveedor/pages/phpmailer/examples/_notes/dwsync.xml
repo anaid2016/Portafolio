@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="contents.html" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129387117660000000" remote="130881162390000000" Dst="0" />
+<file name="index.html" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129859994660000000" remote="130881162390000000" Dst="0" />
+<file name="test_db_smtp_basic.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129719804070000000" remote="130881162390000000" Dst="0" />
+<file name="test_mail_advanced.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162390000000" Dst="0" />
+<file name="test_mail_basic.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162400000000" Dst="0" />
+<file name="test_pop_before_smtp_advanced.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162400000000" Dst="0" />
+<file name="test_pop_before_smtp_basic.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129719804070000000" remote="130881162400000000" Dst="0" />
+<file name="test_sendmail_advanced.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162400000000" Dst="0" />
+<file name="test_sendmail_basic.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162400000000" Dst="0" />
+<file name="test_smtp_advanced.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162410000000" Dst="0" />
+<file name="test_smtp_advanced_no_auth.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162410000000" Dst="0" />
+<file name="test_smtp_basic.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129719804070000000" remote="130881162410000000" Dst="0" />
+<file name="test_smtp_basic_no_auth.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129719804070000000" remote="130881162410000000" Dst="0" />
+<file name="test_smtp_gmail_advanced.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129888309400000000" remote="130881162410000000" Dst="0" />
+<file name="test_smtp_gmail_basic.php" server="wmsastaller.ddns.net:10022//var/www/html/SGE/" local="129719804070000000" remote="130881162420000000" Dst="0" />
+</dwsync>

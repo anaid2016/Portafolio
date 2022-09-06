@@ -1,0 +1,1 @@
+COPY /B "C:\xampp\htdocs\proveedor\pages\imprimiendo.txt" \\localhost\RZ400
