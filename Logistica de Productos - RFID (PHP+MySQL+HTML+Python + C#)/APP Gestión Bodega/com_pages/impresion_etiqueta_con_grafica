@@ -1,0 +1,38 @@
+<?php
+
+/*$zpl="^XA \n";
+		$zpl.="^FO50, 70^ADN, 20,20 ^FD ".$et_nombre."^FS \n";
+		$zpl.="^FO50, 96^ADN, 20,20 ^FD ".$et_nombre2."^FS \n";
+		$zpl.="^FO600, 70 \n";
+		$zpl.="^XGE:ETIQUETA.GRF^FS \n";
+		$zpl.="^FO50, 140^ADN, 12, 12^FD FECHA ENTRADA: ".$et_fecha."^FS \n";
+		$zpl.="^FO50, 160^ADN, 12, 12^FD ".$zpluser."^FS \n";
+		$zpl.="^FO50, 180^ADN, 12, 12^FD SERIAL:".$et_RFID."^FS \n";
+		$zpl.="^FO50, 204^ADN, 20, 20^FD BARRAS: ".$et_barras."^FS \n";
+		$zpl.="^FO50, 234^ADN, 19, 19^FD CANTIDAD:".$et_cant."^FS \n";
+		$zpl.="^FO20,296^BY2 \n";
+		$zpl.="^BCN,60,Y,N,N \n";
+		$zpl.="^FD".$et_barrasf."^FS \n";
+		$zpl.="^RS,350,,1,N^FS \n";
+		$zpl.="^RB96,96^FS \n";
+		$zpl.="^RFW,E^FD".$et_RFID."^FS \n";
+		$zpl.="^XZ\n"; */
+		
+		/*$zpl="^XA \n";
+		$zpl.="^FO50, 70^ADN, 17, 33^FD ".$et_nombre."^FS \n";
+		$zpl.="^FO600, 70 \n";
+		$zpl.="^XGE:ETIQUETA.GRF^FS \n";
+		$zpl.="^FO50, 140^ADN, 12, 12^FD FECHA ENTRADA: ".$et_fecha."^FS \n";
+		$zpl.="^FO50, 160^ADN, 12, 12^FD ".$zpluser."^FS \n";
+		$zpl.="^FO50, 180^ADN, 12, 12^FD SERIAL:".$et_RFID."^FS \n";
+		$zpl.="^FO50, 204^ADN, 20, 20^FD BARRAS: ".$et_barras."^FS \n";
+		$zpl.="^FO50, 234^ADN, 19, 19^FD CANTIDAD:".$et_cant."^FS \n";
+		$zpl.="^FO50,296^BY2 \n";
+		$zpl.="^BCN,60,Y,N,N \n";
+		$zpl.="^FD".$et_barrasf."^FS \n";
+		$zpl.="^RS,350,,1,N^FS \n";
+		$zpl.="^RB96,96^FS \n";
+		$zpl.="^RFW,E^FD".$et_RFID."^FS \n";
+		$zpl.="^XZ\n"; */
+		
+?>

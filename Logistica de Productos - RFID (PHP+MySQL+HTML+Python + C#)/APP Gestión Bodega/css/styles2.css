@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #181B20;
+	
+}
+
+
+.login{
+	clear:both;
+	margin:0px auto;
+	height:610px;	
+	background:url(../images/fondo2.png) no-repeat;	
+	padding-top:200px;
+	padding-left:50px;
+}
+
+
+.intro td{
+	font-size:20pt;	
+}
+
+.boton{
+	font-size:20pt;	
+}
+
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	
+}
+
+/* Header */
+
+#header-wrapper {
+	height: 30px;
+}
+
+#header {
+	width: 460px;
+	margin: 0 auto;
+}
+
+#page {
+	width: 460px;
+	margin: 0px auto;
+	min-height: 400px;
+	border:solid 1px;
+}
+
+
+#page-content {
+	width: 460px;
+	margin: 0px auto;
+	min-height: 400px;
+	
+}
+
+/*Other class*/
+
+.data_table{
+	width:400px;
+	border-top:solid 1px #0033CC;	
+}
+
+.data_table th{
+	border-bottom:solid 1px #0033CC;	
+}
+
+.data_table td{
+	border-bottom:solid 1px #0033CC;	
+}

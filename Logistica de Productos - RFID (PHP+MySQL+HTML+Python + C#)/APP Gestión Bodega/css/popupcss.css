@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11pt;
+	background:#D6D6D6;
+	margin:10px 30px;
+}
+	
+h1{
+	font-size:12pt;	
+}
+
+h2{
+	font-size:13pt;
+	color:#063;	
+}
+	
+#contenidof{
+	width:900px; 
+	background:#FFF;
+	padding:15px;
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+
+#contenidof2{
+	width:1450px; 
+	background:#FFF;
+	padding:15px;
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+
+
+#contenidof4{
+	width:auto; 
+	background:#FFF;
+	padding:15px;
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	font-size:11pt;
+}
+
+
+#contenidof3{
+	width:1000px; 
+	background:#FFF;
+	padding:15px;
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+
+#contenidof5{
+	width:410px; 
+	background:#FFF;
+	padding:15px;
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+	
+form .other{
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border:solid #999 1px;
+	width:600px;
+	margin-left:60px;
+	padding:  10px;
+}
+
+.formularioprod{
+	width:700px;
+	margin-top:10px;	
+}
+
+.formularioprod td{
+	padding: 4px 1px;	
+}
+
+.formularioprod input.lineas{
+	width:90%;
+	font-size:8pt;
+}
+
+.formulario td{
+	font-size:10pt;
+}
+
+.ventanapop tr:hover {
+    background-color: #000;
+}
+
+.ventanapop tr:hover td {
+    background-color: transparent; /* or #000 */
+}
+
+#divContenedor table{
+	background:#000;
+	border-radius:5px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border:solid 1px #333;
+	color:#fff;
+	border-top:none;
+	padding:10px;
+}
+
+
+#divContenedor table caption{
+		text-indent:15px;
+		background:#ff0000 url(../img/contraer.png) left center no-repeat;
+		text-align:left;
+		cursor:pointer;
+		padding:5px;
+		font-style:italic;
+		color:#fff;
+		border-radius:5px;
+		border:solid 1px #333;
+		border-bottom-left-radius:0px;
+		border-bottom-right-radius:0px;
+		border-bottom:none;
+}
+
+
+#divContenedor{
+	position:absolute;
+	left:50%;
+	margin-left:-470px;
+	top:0px;
+	width:940px;
+	z-index:1000;
+}
+
+
+#divContenedorTabla{
+	padding:4px;
+	float:left;
+}
+
+#divCali{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	background:#000;
+	
+}
+#divCali img{
+	padding:20px;
+	border:0;
+}
+
+.clsAnchoTotal{
+	width:90%;
+	font-size:8pt;
+}
+
+.small{
+	font-size:8pt;
+}
+
+.small_2{
+	border:none;
+	font-size:7pt;
+	width:90%;
+}
+
+.small_3{
+	border:none;
+	font-size:10pt;
+	width:90%;
+}
+
+.clsExpandir{
+	background:#ff0000 url(../img/expandir.png) left center no-repeat;
+}
+
+.clsContraer{
+	background:#ff0000 url(../img/contraer.png) left center no-repeat;
+}
+
+/*Tablas popup*/
+
+.datagrid table{ 
+border-collapse: collapse; 
+text-align: left; 
+width: 100%; 
+} 
+
+.datagrid {
+font: normal 12px/150% Arial, Helvetica, 
+sans-serif; background: #fff; 
+overflow: hidden; 
+border: 1px solid #006699; 
+-webkit-border-radius: 3px; 
+-moz-border-radius: 3px; border-radius: 3px; 
+}
+
+.datagrid table td, .datagrid table th { 
+padding: 3px 10px; 
+}
+.datagrid table thead th {
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );
+background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+background-color:#006699; 
+color:#FFFFFF; 
+font-size: 12px; 
+font-weight: bold; 
+border-left: 1px solid #0070A8; } 
+
+.datagrid table thead th:first-child 
+{ border: none; }
+
+.datagrid table tbody td { 
+color: #00557F; 
+border-left: 1px solid #E1EEF4;
+font-size: 12px;font-weight: 
+normal; 
+}
+
+.datagrid table tbody .alt td {
+ background: #E1EEf4; 
+ color: #00557F; }
+ 
+ .datagrid table tbody td:first-child { 
+ border-left: none; 
+ }
+ 
+ .datagrid table tbody tr:last-child td {
+ border-bottom: none; }
+ 
+ .datagrid table tfoot td{ 
+ border-top: 1px solid #006699;
+ background: #E1EEf4;} 
+ 
+ .datagrid table tfoot td { padding: 14px 0px 0px 0px; font-size: 12px } 
+ 
+
+.datagrid table.sinbordes{
+	clear:both;
+	border:none;	
+	
+}
+
+.datagrid table.othertype{
+	width:100%;	
+}
+
+td.titulos{
+	font:Arial, Helvetica, sans-serif;
+	color:#900;
+	font-weight:bold;
+	font-size:1.2em;
+	width:120px;
+}
+
+td.titulos2{
+	font:Arial, Helvetica, sans-serif;
+	color:#900;
+	font-weight:bold;
+	font-size:0.8em;
+	width:120px;
+}

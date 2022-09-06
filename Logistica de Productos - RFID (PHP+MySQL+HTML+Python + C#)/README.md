@@ -26,11 +26,14 @@ Requerimientos
 	
 Instalación 
 
-La guia de instalación se encuentra aqui:[Manual_Instalacion](https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP%2BMySQL%2BHTML%2BPython%20%2B%20C%23)/Manuales/Manual_Instalacion_Mantenimiento.pdf)
+La guia de instalación se encuentra aqui: [Manual_Instalacion](https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP%2BMySQL%2BHTML%2BPython%20%2B%20C%23)/Manuales/Manual_Instalacion_Mantenimiento.pdf)
 
 
 
 Hardware RFID Integrado
+
+
+
 
 
  

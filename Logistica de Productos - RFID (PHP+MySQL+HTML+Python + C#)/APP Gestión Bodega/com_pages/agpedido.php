@@ -1,0 +1,561 @@
+<?php
+	$archivo="../funciones/datos.txt";
+	include("../funciones/conexbd.php");
+	include("../funciones/comx_dbconn.php");
+	include("../funciones/librerias.php");
+	include("../funciones/seguridad.php");
+	
+	//Creación de Arrays 
+	$arrid=array();
+	$arra=array();
+	$arrb=array();
+	$arrc=array();
+	$arrd=array();
+	$arre=array();
+	$arrf=array();
+	$arrg=array();
+	$arrh=array();
+	$arri=array();
+	$arrj=array();
+	$arrk=array();
+	$arrl=array();
+	$arrm=array();
+	$arrn=array();
+	
+	//Creacion de variables fijas
+	$noorden="";
+	$fechasolicitud=gmdate("Y-m-d");
+	$fechacierre="";
+	$provdireccion="";
+	$totalsiniva=0;
+	$totaliva=0;
+	$totalconiva=0;
+	$usercreo="";
+	$userid="";
+	$estado="";
+	$estadoid="";
+	
+	$d=0;
+	$id='';
+	if(!empty($_GET['Id'])){
+		
+				// Busqueda del proveedor
+				$id=$_GET['Id'];
+				$buscar=mysql_query("SELECT com_pedidos.* FROM com_pedidos WHERE Id='$id'",$conexion);
+				while($resultado=mysql_fetch_assoc($buscar)){
+					$nopedido=$resultado['nopedido'];
+					$fecharealizado=$resultado['fechapedido'];
+					$fechasalida=$resultado['fechasalida'];
+					$fechaentrega=$resultado['fechaentrega'];
+					$clientedireccion=$resultado['direccioncliente_id'];
+					$totalsiniva=$resultado['totalantesiva'];
+					$totaliva=$resultado['totaliva'];
+					$totalconiva=$resultado['totalconiva'];
+					$estadoid=$resultado['estado_id'];
+					$sol_cliente=$resultado['sol_cliente'];
+				}
+				
+				//Busqueda de los producto asociados a una orden de compra existente
+				
+				$bproductos=mysql_query("SELECT com_productos.nombre,com_productos.codbarras,com_unidades.nombre as unidad,
+com_productospedido.*,com_inventario.RFID FROM com_productospedido 
+LEFT JOIN com_inventario ON com_productospedido.inventario_id=com_inventario.Id
+LEFT JOIN com_productos ON com_productos.Id=com_inventario.producto_id
+LEFT JOIN com_unidades ON com_unidades.Id=com_productos.unidadproducto_id
+WHERE com_productospedido.pedido_id='$id'",$conexion);
+
+
+			while($resultado=mysql_fetch_assoc($bproductos)){
+					array_push($arrid,$resultado['Id']);				//Id de la linea de Pedido
+					
+					array_push($arra,$resultado['inventario_id']);		//Codigo de la linea de inventario
+					array_push($arrc,$resultado['codbarras']);			//Codigo de barras del producto
+					array_push($arrd,$resultado['nombre']);				//Nombre del producto
+					array_push($arre,$resultado['cantidadpedida']);		//Cantidad del producto m,pares
+					array_push($arrf,$resultado['RFID']);				//RFID DE LA UNIDAD COMPLETA
+					array_push($arrg,$resultado['unidad']);				//Unidad de medida base
+					array_push($arrh,$resultado['preciobase']);			//Precio base
+					array_push($arri,$resultado['porcentajeiva']);
+					array_push($arrj,$resultado['preciogravado']);		//Precio Gravado
+			}
+			
+			//Si el pedido es una solicitud del punto de venta -----//
+			
+			$nomsol=array();
+			$codsol=array();
+			$cantsol=array();
+			$valoresp=array();
+			
+			if($sol_cliente==1){
+				
+				$bsolcliente=mysql_query("SELECT com_pedidos2.*,com_productos.nombre FROM com_pedidos2 
+				LEFT JOIN com_productos ON com_productos.codbarras=com_pedidos2.codbarras WHERE com_pedidos2.pedido_id='$id' ",$conexion);
+				
+				while($resultado=mysql_fetch_assoc($bsolcliente)){
+					
+					$nomsol[]=$resultado["nombre"];
+					$codsol[]=$resultado["codbarras"];
+					$cantsol[]=$resultado["cantidad"];
+					$valoresp[]=$resultado["preciolinea"];
+								
+				}
+			}
+			
+
+	}
+	
+	
+	if(!empty($_POST['Id']) || !empty($_GET['Id'])){
+	 $tpwindow="Modificar ";	
+		
+	}else{
+	  $tpwindow="Nueva ";	
+	}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Agregar Pedido</title>
+<link rel="stylesheet" type="text/css" href="../css/popupcss.css"/>
+<script src="js/jquery1-9.js"></script>
+<script src="js/jquery10-2.js"></script>
+<script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="../SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+<script> 
+ function Cerrar(){
+	opener.location.href = "../acceso.php?com_pg=7";
+    window.close();
+}
+
+ function ventana(filita){
+	 	var params = [
+		'height='+screen.height,
+		'width='+screen.width,
+		'fullscreen=yes',
+		'scrollbars=1' // only works in IE, but here for completeness
+		].join(',');
+	 
+	 	proveedor=document.getElementById('direccion').value;
+		myWindow=window.open("popuplistadoinventario.php?prov="+proveedor+"&fila="+filita+"",'',params);
+		myWindow.focus();
+ }
+ 
+ function datos(val1,val4){
+	var conteoline=1; 
+	var longitud=val1.length; 
+	var newlongitud=longitud-2;
+	val1=val1.substring(0,newlongitud);
+	if(val4=='' && val1==''){
+		
+	}else{
+	  var vectorini=val1.split("::");
+	  var longini=vectorini.length;
+	  for(j=0;j<vectorini.length;j++){
+		var vector=vectorini[j].split("-");
+		if(conteoline==1){
+			document.getElementById('ca'+val4).value=vector[0];
+			//document.getElementById('cb'+val4).value=vector[1];
+			document.getElementById('cc'+val4).value=vector[1];
+			document.getElementById('cd'+val4).value=vector[2];
+			document.getElementById('ce'+val4).value=vector[3];
+			document.getElementById('cg'+val4).value=vector[4];
+			document.getElementById('cf'+val4).value=vector[5];
+			document.getElementById('ch'+val4).value=vector[6];
+			document.getElementById('ci'+val4).value=vector[7];
+			document.getElementById('cj'+val4).value=vector[8];
+			
+			var v1=document.getElementById('ttbase').value;
+			var v2=document.getElementById('ttiva').value;
+			var v3=document.getElementById('ttgravado').value;
+			
+			
+			var tt1=Number(v1)+Number(vector[6]);
+			var tt2=Number(v2)+((vector[6]*vector[7])/100);
+			var tt3=Number(v3)+Number(vector[8]);
+			
+			
+			document.getElementById('ttbase').value=tt1.toFixed(2);
+			document.getElementById('ttiva').value=tt2.toFixed(2);
+			document.getElementById('ttgravado').value=tt3.toFixed(2);
+			document.getElementById('btnap'+val4).disabled=true;
+		}else{
+			crearnuevafila("agregar");
+			val4=Number(val4)+1;
+			document.getElementById('ca'+val4).value=vector[0];
+			//document.getElementById('cb'+val4).value=vector[1];
+			document.getElementById('cc'+val4).value=vector[1];
+			document.getElementById('cd'+val4).value=vector[2];
+			document.getElementById('ce'+val4).value=vector[3];
+			document.getElementById('cg'+val4).value=vector[4];
+			document.getElementById('cf'+val4).value=vector[5];
+			document.getElementById('ch'+val4).value=vector[6];
+			document.getElementById('ci'+val4).value=vector[7];
+			document.getElementById('cj'+val4).value=vector[8];
+			
+			var v1=document.getElementById('ttbase').value;
+			var v2=document.getElementById('ttiva').value;
+			var v3=document.getElementById('ttgravado').value;
+			
+			
+			var tt1=Number(v1)+Number(vector[6]);
+			var tt2=Number(v2)+((vector[6]*vector[7])/100);
+			var tt3=Number(v3)+Number(vector[8]);
+			
+			
+			document.getElementById('ttbase').value=tt1.toFixed(2);
+			document.getElementById('ttiva').value=tt2.toFixed(2);
+			document.getElementById('ttgravado').value=tt3.toFixed(2);
+			document.getElementById('btnap'+val4).disabled=true;
+		
+		}
+		  //alert("soy :"+vectorini[$j]);
+		  conteoline=conteoline+1;
+	  }
+		
+	}
+ }
+</script>
+<link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="../SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="contenidof4">
+    	<h2> >> <?php echo $tpwindow; ?>Pedidos Clientes</h2>
+			<?php
+			
+			//Guardando Producto Creado -----------------------------------------------------------//
+            if(!empty($_POST['Guardar'])){
+				$totalgravado=0;
+				$totalbase=0;
+				$id='';
+				/*Datos Basicos de la Orden de Compra*/
+				$v1=$_POST['fsolicitud'];
+				$v2=$_POST['frecibido'];
+				$v5=$_POST['fentrega'];				
+				$v3=$_POST['direccion'];
+				$v4=$iduser;
+				
+				$idelim=$_POST['eliminadas'];
+				$veliminar=explode(",",$idelim);
+			
+				if(!empty($_POST['cantidad2']) && $_POST['cantidad2']>0){
+					$cantidad=$_POST['cantidad2'];
+				}else{
+					$cantidad=$_POST['cantidad'];
+				}
+				
+				if(!empty($_POST['Id'])){
+					$id=$_POST['Id'];
+				}
+				
+				
+				$vector1=array();			//Linea de Pedido si existe
+				$vector2=array();			//Linea de inventario asociada
+				$vector3=array();			//Precio base
+				$vector4=array();			//Porcentaje IVA
+				$vector5=array();			//Precio Gravado
+				$vector6=array();			//Cantidad Pedida
+				
+				for($b=1;$b<=$cantidad;$b++){
+					$est1='b'.$b;
+					$est2='a'.$b;
+					$est3='h'.$b;
+					$est4='i'.$b;
+					$est5='j'.$b;
+					$est6='e'.$b;
+				
+					$vector1[$b]=$_POST[$est1];	
+					$vector2[$b]=$_POST[$est2];
+					$vector3[$b]=$_POST[$est3];
+					$totalbase+=$_POST[$est3];	/*Total base*/
+					$vector4[$b]=$_POST[$est4];
+					$vector5[$b]=$_POST[$est5];
+					$totalgravado+=$_POST[$est5];	/*Total Gravado*/
+					$vector6[$b]=$_POST[$est6];
+				}
+				/*TOTAL IVA EN ORDEN DE COMPRA */
+				$totaliva=$totalgravado-$totalbase;
+				
+				
+				
+				//Busqueda de estado en Solicitud
+				$bsolicitud=mysql_query("SELECT * FROM com_estadopedido WHERE nombre='Solicitud'",$conexion);
+				$datos=mysql_fetch_row($bsolicitud);
+				$estado=$datos[0];
+				
+				$error = 0; //variable para detectar error
+				mysql_query("BEGIN"); // Inicio de Transacción
+				
+				
+/*INSERTA O ACTUALIZA DATOS EN LA TABLA ORDEN COMPRA ---------------------------------------------------------------------------------------------------------------------*/
+				if($id==''){
+					$insertar=mysql_query("INSERT INTO com_pedidos SET fechapedido='$v1',fechasalida='$v2',fechaentrega='$v5',direccioncliente_id='$v3',totalantesiva='$totalbase',totaliva='$totaliva',totalconiva='$totalgravado',estado_id='$estado'");
+				}else{
+					$insertar=mysql_query("UPDATE com_pedidos SET fechapedido='$v1',fechasalida='$v2',fechaentrega='$v5',direccioncliente_id='$v3',totalantesiva='$totalbase',totaliva='$totaliva',totalconiva='$totalgravado',estado_id='$estado' WHERE Id=$id");
+				}
+				
+				
+				
+				if(!$insertar)
+				$error=1;
+				
+				if(empty($_POST['Id'])){
+					//echo mysql_insert_id();
+					$lastinsert=mysql_insert_id();
+				}else{
+					$lastinsert=$id;
+				}
+
+			 
+				for($b=1;$b<=$cantidad;$b++){ 
+	
+					if($vector1[$b]==''){
+						$insertar=mysql_query("INSERT INTO com_productospedido (preciobase,porcentajeiva,preciogravado,pedido_id,estado_id,cantidadpedida,cantidadenviada,inventario_id) VALUES ('$vector3[$b]','$vector4[$b]','$vector5[$b]','$lastinsert','$estado','$vector6[$b]','0','$vector2[$b]')" );
+						
+						
+					}else{
+						$insertar=mysql_query("UPDATE com_productospedido SET preciobase='$vector3[$b]',porcentajeiva='$vector4[$b]',preciogravado='$vector5[$b]',estado_id='$estado',cantidadpedida='$vector6[$b]',cantidadenviada='0',inventario_id='$vector2[$b]',pedido_id='$id' WHERE Id='$vector1[$b]'");
+					
+					}
+					
+					if(!$insertar){
+						$error=1;
+					}
+
+
+					
+					//Apartando Lineas de inventario para el pedido
+					$insertar=mysql_query("UPDATE com_inventario SET existencia='1' WHERE Id='$vector2[$b]'");
+					if(!$insertar){
+						$error=1;
+					}
+					
+				}
+				
+/*ELIMINAR LINEAS DEL PEDIDO-------------------------------------------------------------------------------------------------------------------------*/
+
+				for($k=0;$k<count($veliminar);$k++){
+					if($veliminar[$k]!=''){
+						//Buscando las lineas de inventario asociadas para reestablecer estado
+						$insertar=mysql_query("UPDATE com_inventario SET existencia='0' WHERE Id=(SELECT com_productospedido.inventario_id FROM com_productospedido WHERE  Id='$veliminar[$k]')");
+						
+						if(!$insertar){
+							$error=1;
+						}
+						
+						
+						$insertar=mysql_query("DELETE FROM com_productospedido WHERE Id='$veliminar[$k]'");
+						if(!$insertar){
+							$error=1;
+						}
+					}
+				}
+
+
+/*REVISANDO ERRORES EN MYSQL --------------------------------------------------------------------------------------------------------------------------------------*/
+				
+				if($error==1) {
+					mysql_query("ROLLBACK");
+					echo "No se pudieron realizar los cambios";
+				} else {
+					mysql_query("COMMIT");
+					echo "Pedido Agregado con éxito";
+				}
+				
+				echo "<script lenguaje=\"JavaScript\">setTimeout('Cerrar()',3000);</script>";
+				 
+			}else{
+               
+
+            ?>
+            <p>Diligencie el formulario en su totalidad y de clic en Guardar:</p>
+            
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="POST" class="other">
+				<table width="1000" class="formulario">
+					<tr>
+                    	<td>No Pedido:</td>
+                        <td><span id="sprytextfield1">
+                          		<input type="text" name="nopedido" id="nopedido" readonly="readonly" value="<?php echo (!empty($nopedido))? $nopedido:''; ?>" />
+                          		<span class="textfieldRequiredMsg">*</span></span>
+                        </td>
+                        <td>Fecha:</td>
+                        <td><span id="sprytextfield2">
+                          	<input type="date" name="fsolicitud" id="fsolicitud" value="<?php echo (!empty($fecharealizado))? $fecharealizado:gmdate('Y-m-d'); ?>" />
+                          	<span class="textfieldRequiredMsg">*</span></span>
+                        </td>
+                   		<td>Fecha Salida:</td>
+                        <td><input type="date" name="frecibido" id="frecibido" readonly="readonly" value="<?php echo (!empty($fechasalida))? $fechasalida:''; ?>"/></td>
+                        <td>Fecha Entrega:</td>
+                        <td><input type="date" name="fentrega" id="fentrega" readonly="readonly" value="<?php echo (!empty($fechaentrega))? $fechaentrega:''; ?>"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">Cliente:
+                       	   <span id="spryselect2">
+                         	<label for="direccion"></label>
+                         	<select name="direccion" id="direccion">
+                            	<?php
+									if($id==''){
+										opdireccioncliente();
+										
+									}else{
+										opdireccionclientesel($clientedireccion);	
+									}
+								?>
+                       	  	</select>
+                       	 <span class="selectRequiredMsg">Seleccione un elemento.</span></span></td>
+                   </tr>
+         </table>	
+         
+         
+         <!--AQUI SOLO ENTRA SI EL PEDIDO FUE SOLICITADO DESDE EL PUNTO DE VENTA-->
+         <h2>Pedido Recepcionado por el Cliente</h2>
+         
+         <?php
+		  if(!empty($nomsol) and count($nomsol)>0){
+		 ?>
+         	<table cellpadding="3" cellspacing="0" border="1"><tr><td>Codigo de Barras</td><td>Nombre</td><td>Cantidad</td><td>Valor Esperado</td></tr>
+          <?php
+				for($a=0;$a<count($nomsol);$a++){
+		 ?>
+         		<tr>
+                	<td><?php echo $codsol[$a]; ?></td>
+                	<td><?php echo $nomsol[$a]; ?></td>
+                    <td><?php echo $cantsol[$a]; ?></td>
+                    <td><?php echo $valoresp[$a]; ?></td>
+                 </tr>
+          <?php	
+				}
+		  ?>
+			</table>
+		<?php	  
+		  }
+		 ?>
+         
+         
+         
+         <!--AQUI TERMINA-->
+         
+              <br/>
+              <br/>
+         <div class="datagrid">
+              <table class="ventanapop" cellspacing="0" cellpadding="0" >
+                <thead>
+                <tr>
+                  <th>Cod.</th>
+                  <th>Producto</th>
+                  <th>Cantidad Pedida</th>
+                  <th>RFID (Rollo/Caja)</th>
+                  <th>Und.</th>
+                  <th>Valor Base</th>
+                  <th>% IVA</th>
+                  <th>Valor Gravado</th>
+                  <th style="display:none">Cant. Recibida</th>
+                  <th style="display:none">Fecha Recibido</th>
+                  <th style="display:none">Recibió</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                if(count($arrid)==0){
+                ?>
+				<tr id="linea1">
+                      <td width="200">
+                      <input type="hidden" class="clsAnchoTotal"  name="a1" id="ca1" size="5" />	<!--Id de inventario -->
+                      <input type="hidden" class="clsAnchoTotal"  name="b1" id="cb1" size="5"/>		<!--Id de la linea producto apartado-->
+                      <input type="text" readonly="readonly" name="c1" id="cc1" size="20"/>			<!--Codigo de Barras del producto-->
+                      <input type="button" value="AP" onclick="ventana('1')"  style="display:inline;" id="btnap1" /></td>
+                      <td><input type="text" class="clsAnchoTotal"  readonly="readonly" name="d1"  id="cd1"/></td>	<!--nombre del producto-->
+                      <td><input type="text" class="clsAnchoTotal"  name="e1"  id="ce1" /></td>		<!--Cantidad del rollo-->
+                      <td><input type="text" class="clsAnchoTotal"   name="f1"  id="cf1" /></td>	<!--RFID en unidad del rollo-->
+                      <td><input type="text" class="clsAnchoTotal"   name="g1"  id="cg1"/></td>		<!--Unidad del producto-->
+                      <td><input type="text" class="clsAnchoTotal"   name="h1"  id="ch1" /></td> <!--valor sin iva del producto-->
+                      <td><input type="text" class="clsAnchoTotal"   name="i1"  id="ci1"/></td>		<!--porcentaje iva-->
+                      <td><input type="text" class="clsAnchoTotal"   name="j1"  id="cj1"/></td>		<!--Valor gravado-->
+                      <td align="right" width="50"><input type="button" value="-" class="clsEliminarFila"></td>
+               </tr>
+               <?php
+				}else{
+			 			for($c=0;$c<count($arrid);$c++){
+							$d=$c+1;
+				?>
+                	<tr id="linea<?php echo $d; ?>">
+                      <td width="200">
+                      <input type="hidden" class="clsAnchoTotal"  name="a<?php echo $d; ?>" id="ca<?php echo $d; ?>" size="5" value="<?php echo $arra[$c]; ?>"/>	<!--Id de inventario -->
+                      <input type="hidden" class="clsAnchoTotal"  name="b<?php echo $d; ?>" id="cb<?php echo $d; ?>" size="5" value="<?php echo $arrid[$c]; ?>"/>		<!-- Id de la linea del pedido -->
+                      <input type="text" readonly="readonly" name="c<?php echo $d; ?>" id="cc<?php echo $d; ?>" size="20" value="<?php echo $arrc[$c]; ?>"/>			<!--Codigo de Barras del producto-->
+                      <input type="button" value="AP" onclick="ventana('<?php echo $d; ?>')"  style="display:inline" id="btnap1" disabled="disabled" /></td>
+                      <td><input type="text" class="clsAnchoTotal"  readonly="readonly" name="d<?php echo $d; ?>"  id="cd<?php echo $d; ?>" value="<?php echo $arrd[$c]; ?>"/></td>	<!--nombre del producto-->
+                      <td><input type="text" class="clsAnchoTotal"  name="e<?php echo $d; ?>"  id="ce<?php echo $d; ?>" value="<?php echo $arre[$c]; ?>"/></td>		<!--Cnatidad del rollo-->
+                      <td><input type="text" class="clsAnchoTotal"   name="f<?php echo $d; ?>"  id="cf<?php echo $d; ?>" value="<?php echo $arrf[$c]; ?>"/></td>	<!--RFID rollo-->
+                      <td><input type="text" class="clsAnchoTotal"   name="g<?php echo $d; ?>"  id="cg<?php echo $d; ?>" value="<?php echo $arrg[$c]; ?>"/></td>		<!--Unidad del producto-->
+                      <td><input type="text" class="clsAnchoTotal"   name="h<?php echo $d; ?>"  id="ch<?php echo $d; ?>" value="<?php echo $arrh[$c]; ?>"/></td> <!--valor sin iva del producto-->
+                      <td><input type="text" class="clsAnchoTotal"   name="i<?php echo $d; ?>"  id="ci<?php echo $d; ?>" value="<?php echo $arri[$c]; ?>"/></td>		<!--porcentaje iva-->
+                      <td><input type="text" class="clsAnchoTotal"   name="j<?php echo $d; ?>"  id="cj<?php echo $d; ?>" value="<?php echo $arrj[$c]; ?>"/></td>		<!--Valor gravado-->
+                      <td align="right" width="50"><input type="button" value="-" class="clsEliminarFila"></td>
+                    </tr>
+                <?php
+						}
+					}
+				?>	
+                
+                </tbody>
+               <tfoot>
+           		<tr>
+						<td colspan="13" align="right">
+							<?php
+						    if(empty($_GET['view'])){
+							?>
+							<input type="button" value="Agregar una fila" class="clsAgregarFila" id="agregar">
+                             <input type="hidden" name="valorded" id="valorded" value="<?php echo ($d>0)? $d:'1'; ?>"/>
+                            <input type="hidden" name="cantidad2" id="cantidad2" value="<?php echo ($d>0)? $d:'1'; ?>"/>
+							<input type="hidden" name="cantidad" id="cantidad" />
+                            <input type="hidden" name="eliminadas" id="eliminadas" />
+                            <input type="hidden" name="Id" id="Id" value="<?php echo $id; ?>"/>
+                            <input type="submit" value="Enviar" name="Guardar" />
+							<?php
+							}
+							?>
+							
+                            <!--<input type="button" value="Clonar la tabla" class="clsClonarTabla">
+							<input type="button" value="Eliminar la tabla" class="clsEliminarTabla">-->
+						</td>
+					</tr>
+				</tfoot>
+                </table>
+            
+           
+           
+       </div>  
+       <br/>
+       		<!--Totales de OC -->
+           <table class="sinbordes" align="right" >
+                            	<tr>
+                                    <td>Total Base</td>
+                                    <td><input type="text" value="<?php echo $totalsiniva; ?>" id="ttbase" /></td>
+                                    <td>&nbsp;</td>
+                                    <td>Total IVA</td>
+                                    <td><input type="text" value="<?php echo $totaliva; ?>" id="ttiva" /></td>
+                                    <td>&nbsp;</td>
+                                    <td>Total Gravado</td>
+                                    <td><input type="text" value="<?php echo $totalconiva; ?>" id="ttgravado"/></td>
+                                </tr>
+           </table>
+       <br/>    
+  </form>
+
+  <?php
+			}
+			
+			?>
+</div>
+<script type="text/javascript">
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2");
+</script>
+<script type="text/javascript" src="js/manipulacion3.js"></script>
+</body>
+</html>

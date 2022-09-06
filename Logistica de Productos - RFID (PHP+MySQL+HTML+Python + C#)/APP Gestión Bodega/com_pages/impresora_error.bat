@@ -1,0 +1,1 @@
+COPY /B "C:\xampp\htdocs\bodega\com_pages\etiquetas_malas.txt" \\localhost\RZ400

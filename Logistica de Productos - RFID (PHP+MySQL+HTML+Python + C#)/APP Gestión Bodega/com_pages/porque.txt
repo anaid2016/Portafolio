@@ -1,0 +1,9 @@
+SELECT count(*) as totalids,com_inventario.arraybodega_id,prodbus.ocupado,prodbus.producto_id,com_arraybodega.nombre FROM com_inventario
+LEFT JOIN(
+ SELECT count(*) as ocupado,inv2.arraybodega_id,inv2.producto_id FROM com_inventario as inv2
+	WHERE inv2.fechasalida is NULL AND inv2.producto_id in ('8') 
+	and inv2.arraybodega_id is not null GROUP BY inv2.arraybodega_id
+) AS prodbus ON prodbus.arraybodega_id=com_inventario.arraybodega_id
+LEFT JOIN com_arraybodega ON com_arraybodega.Id=com_inventario.arraybodega_id
+WHERE com_inventario.fechasalida is NULL and com_inventario.arraybodega_id is not null 
+GROUP BY com_inventario.arraybodega_id

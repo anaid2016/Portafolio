@@ -1,0 +1,1285 @@
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in (2,3,4) GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel
+SELECT com_arraybodega.Id,com_arraybodega.nombre,com_arraybodega.capacidad,ocupado FROM com_arraybodega
+LEFT JOIN(
+	SELECT count(Id) as ocupado,arraybodega_id FROM com_inventario WHERE com_inventario.fechasalida is null GROUP BY arraybodega_id
+) AS invt ON invt.arraybodega_id=com_arraybodega.Id
+WHERE talla_id='18' and categoria_id='2' and com_arraybodega.Id not in () GROUP BY com_arraybodega.Id ORDER BY estante,nivel

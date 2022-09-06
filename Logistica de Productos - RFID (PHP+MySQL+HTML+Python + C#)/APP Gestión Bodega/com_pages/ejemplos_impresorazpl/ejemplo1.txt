@@ -1,0 +1,8 @@
+^XA 
+^FO250, 70^ADN, 11, 7^FD COMERTEX^FS 
+^FO320, 105^ADN, 11, 7^FD Prueba 1 ^FS 
+^FO30, 150^ADN, 11, 7^FD Texto de muestra 1 ^FS 
+^FO80,210^BY3
+^BSN,100,Y,N
+^FD12345^FS
+^XZ 

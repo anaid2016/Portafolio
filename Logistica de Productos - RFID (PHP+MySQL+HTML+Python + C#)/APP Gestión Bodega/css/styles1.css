@@ -1,0 +1,383 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #181B20;
+	
+}
+
+
+.login{
+	clear:both;
+	margin:10px auto;
+	width:450px;
+	height:650px;
+	background:url(../images/fondo1.png) no-repeat;	
+}
+
+.intro{
+	padding-top:70%;
+	padding-left:30%;
+}
+
+h1, h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	color: #2483A6;
+}
+
+h1 {
+	font-size: 1.8em;
+	text-transform:capitalize;
+}
+
+h2 {
+	font-size: 1.6em;
+	text-transform: uppercase;
+	padding-top:70px;
+}
+
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+	color: #2483A6;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	
+}
+
+/* Header */
+
+#header-wrapper {
+	height: 90px;
+}
+
+#header {
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+
+}
+
+/*Barra*/
+
+.filtro{
+	float: left;
+}
+
+#barra ul{
+	z-index: 0;
+	margin:0px 1px 6px -33px;
+	display: inline-block;
+	float: right;
+	border:none;
+}
+
+
+#barra li{
+	background-color:#0C0;
+	display: inline-block;
+	list-style-type: none;
+	margin-right:0px;
+}
+
+#barra li img{
+	vertical-align: middle;
+}
+
+#barra a:hover{
+	vertical-align: middle;
+	background:#fff;
+	padding-top: 4px;
+	padding-bottom: 5px;
+	
+}
+
+/* Logo */
+
+#logo {
+	width: 1200px;
+	margin: 0px auto;
+	padding: 0px 0px 0px 0px;
+	color: #FFFFFF;
+	z-index:1;
+}
+
+#logo h1, #logo p {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	margin: 0px;
+	letter-spacing: -1px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 54px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#logo h1 a {
+	color: #FFFFFF;
+}
+
+#logo p {
+	margin-top: -10px;
+	padding-bottom:20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Arvo', serif;
+	font-size: 14px;
+	color:#D5D700;
+}
+
+#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.deslogin{
+	text-align:right;
+	width:400px;
+	font-size:0.8em;
+	z-index:2;	
+}
+
+
+
+/* Page */
+
+#page {
+	width: 1200px;
+	margin: 0px auto;
+	min-height: 400px;
+}
+
+
+#page-content {
+	width: 1200px;
+	margin: 0px auto;
+	min-height: 400px;
+	
+}
+
+/* Menu */
+
+#menu-wrapper {
+	width: 1200px;
+}
+
+/* Content */
+
+#content {
+	clear:both;
+	width: 1200px;
+	padding: 20px 20px;
+}
+
+
+#content h3 {
+	color:#090;
+	text-align:left;
+}
+
+
+#content .filtros {
+	color:#099;
+	font-size:12px;
+}
+
+
+
+/* Footer */
+
+#footer {
+	width: 960px;
+	height: 55px;
+	margin: 0px auto 40px auto;
+	background: url(file:///C|/xampp/htdocs/SGAP/SGAP_V6/images/img07.gif) no-repeat center top;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 18px;
+	line-height: normal;
+	text-align: center;
+	color: #576475;
+}
+
+#footer a {
+	color: #576475;
+}
+
+#grupo1{
+	display:none;	
+	padding-left:0px;
+	padding-top:5px;
+	padding-bottom:5px;	
+}
+
+#grupo2{
+	display:none;	
+	padding-left:0px;
+	padding-top:7px;
+	padding-bottom:5px;	
+}
+
+#grupo3{
+	display:none;	
+	padding-left:0px;
+	padding-top:7px;
+	padding-bottom:5px;	
+}
+
+#grupoagp2{
+	display:none;	
+	padding-left:0px;
+	padding-top:7px;
+	padding-bottom:5px;	
+}
+
+#grupo4{
+	display:none;	
+	padding-left:0px;
+	padding-top:7px;
+	padding-bottom:5px;	
+}
+
+#grupo5{
+	display:none;	
+	padding-left:0px;
+	padding-top:7px;
+	padding-bottom:5px;	
+}
+
+/*tablas generales*/
+
+.datagrid .other{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #06F), color-stop(1, #06F) );
+	background:-moz-linear-gradient( center top, #36752D 5%, #275420 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');
+	background-color:#36752D; 
+	color:#FFFFFF; 
+	font-size: 12pt; 
+	font-weight: bold;
+	border-left: 1px solid #36752D;	
+	
+}
+
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } 
+.datagrid {
+	font: normal 11px/150% Arial, Helvetica, sans-serif; 
+	background: #fff; 
+	overflow: hidden; 
+	border: 1px solid #36752D; 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+}
+
+.datagrid table td, .datagrid table th { padding: 3px 10px; }
+
+.datagrid table thead th {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #36752D), color-stop(1, #275420) );
+	background:-moz-linear-gradient( center top, #36752D 5%, #275420 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');
+	background-color:#36752D; 
+	color:#FFFFFF; 
+	font-size: 13pt; 
+	font-weight: bold;
+	 border-left: 1px solid #36752D;
+	 text-align:center } 
+
+.datagrid table thead th:first-child { border: none; }
+
+.datagrid table tbody td { 
+	color: #275420; 
+	border-left: 1px solid #C6FFC2;
+	font-size: 12pt;
+	font-weight: normal; 
+}
+
+.datagrid table tbody tr:hover { 
+	background-color:#F8DED6;
+}
+
+.datagrid table tbody .alt td {
+	 background: #DFFFDE; 
+	 color: #275420; 
+}
+
+.datagrid table tbody .alt2 td {
+	 background:#CE092C;
+	 color: #FFF; 
+}
+
+.datagrid table tbody .alt3 td {
+	 background:#FC0;
+	 color: #000; 
+}
+
+.datagrid table tbody td:first-child { border-left: none; }
+
+.datagrid table tbody tr:last-child td { border-bottom: none; }
+
+.datagrid table tfoot td { border-top: 1px solid #36752D;} 
+
+.datagrid table tfoot td { padding: 0; font-size: 12px } 
+
+.datagrid table tfoot td div{ padding: 2px; }
+
+.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }
+
+.datagrid table tfoot  li { display: inline; }
+
+.datagrid table tfoot a { 
+text-decoration: none; 
+display: inline-block;  
+padding: 2px 8px; 
+margin: 1px;
+color: #FFFFFF;
+border: 1px solid #36752D;
+-webkit-border-radius: 3px; 
+-moz-border-radius: 3px;
+ border-radius: 3px; 
+ background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #36752D), color-stop(1, #275420) );
+ background:-moz-linear-gradient( center top, #36752D 5%, #275420 100% );
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');
+ background-color:#36752D; 
+ }
+
+.datagrid table tfoot a:active, .datagrid table tfoot a:hover { text-decoration: none;border-color: #275420; color: #FFFFFF; background: none; background-color:#36752D;}
