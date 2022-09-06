@@ -8,7 +8,7 @@ entregada por el hardware RFID.
 
 
 
-Esquema General de Vistas y Funciones
+Esquema General Arquitectura de Vistas y Funciones
 
 
 ![ArquitecturaMacro](https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP+MySQL+HTML+Python%20+%20C%23)/imagenes/img4.png?raw=true)
@@ -23,6 +23,14 @@ Requerimientos
 	* Driver speedway connect 1.4.1” en el reader impinj.5 
 	* Python 2.7.11
 	
+	
+Instalación 
+
+	La guia de instalación se encuentra aqui <a href="https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP%2BMySQL%2BHTML%2BPython%20%2B%20C%23)/Manuales/Manual_Instalacion_Mantenimiento.pdf"> Manual Instalación </a>
+
+
+
+Hardware RFID Integrado
 
 
  
