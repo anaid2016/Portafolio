@@ -8,7 +8,7 @@ Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de p
   
   Objetivo:  Estructurar y desarrollo un sistema para el control de kardex (entrada,salida) para la industria textil que permita validar la eficiencia y eficacia de los protocolos de movimiento de producto por unidades (rollos) y partes de unidad (metros y cm), para la puesta en marcha de las prácticas dentro del laboratorio de logistica.
 
-![ArquitecturaMacro](https://github.com/anaid2016/Portafolio/blob/main/Comertex%20-%20RFID%20(PHP+MySQL+HTML+Python%20+%20C%23)/imagenes/macroproceso.jpg?raw=true)
+![ArquitecturaMacro](https://github.com/anaid2016/Portafolio/blob/main/Logistica%20de%20Productos%20-%20RFID%20(PHP+MySQL+HTML+Python%20+%20C%23)/imagenes/macroproceso.jpg?raw=true)
 
 
     Modulos Desarrolados (Lenguajes):
