@@ -1,7 +1,7 @@
 # Portafolio
-Historial de Desarrollo
 
-Desarrollos realizados organizados por fecha de entrega, bajo los lenguajes de programación PHP, Python, C#, Java y Javascript con diseño de frontend basico para visualizar utilidad en HTML,CSS.
+
+##About Me##
 
 **Indicadores (Mapa OpenStreet + JS)** (Clic aqui para visualizar Demo)
 
