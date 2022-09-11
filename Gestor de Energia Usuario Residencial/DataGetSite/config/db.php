@@ -1,10 +1,10 @@
 <?php
-
+/*Se eliminan conexiones por seguridad*/
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'pgsql:host=18.223.105.203;port=5786;dbname=wm_sge_develop',                    
-    'username' => 'postgres',
-    'password' => 'aws23Rt54',
+    'dsn' => 'pgsql:host=xxxxxx;port=xxx;dbname=xxx',                    
+    'username' => 'xxx',
+    'password' => 'xxx',
     'charset' => 'utf8',
     'schemaMap' => [
       'pgsql'=> [
