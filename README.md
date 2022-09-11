@@ -13,7 +13,9 @@
 
 
 
-**Gestor de Energia Usuario Residencial** <http://18.223.105.203:8086/development/sure/>
+**Gestor de Energia Usuario Residencial** 
+
+Demo: <http://18.223.105.203:8086/development/sure/>
 
 *Para ver el Demo USUARIO: BST6122 y PASSWORD: BST6122*
 
@@ -83,7 +85,9 @@ Frontend
 		
 
 		
-**Indicadores (Mapa OpenStreet + JS)** <http://201.221.158.150:8080/pruebaspostgresql/web/index.php>
+**Indicadores (Mapa OpenStreet + JS)** 
+
+Demo: <http://201.221.158.150:8080/pruebaspostgresql/web/index.php>
 
 Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores con varios puntos de atención.
 
