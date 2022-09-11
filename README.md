@@ -13,7 +13,9 @@
 
 
 
-**Gestor de Energia Usuario Residencial** ![Demo](http://18.223.105.203:8086/production/sure)
+**Gestor de Energia Usuario Residencial** <http://18.223.105.203:8086/development/sure/>
+
+*Para ver el Demo USUARIO: BST6122 y PASSWORD: BST6122*
 
 Objetivo
 

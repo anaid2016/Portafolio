@@ -1,0 +1,231 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-nov-2019, 11:12:04
+    Author     : WGARCIA
+*/
+
+
+ #mapid { 
+    height: 650px; 
+    float: left;
+    width: 100%;
+    z-index: 1;
+}
+
+      
+.botonpopup{
+    background-color: rgba(247, 147, 30, 1);
+    color: #fff;
+    border: none;
+    
+}
+
+.informationover{
+    position: absolute;
+    top: 25px;
+    left: -30px;
+    width: 250px;
+    height: Auto;
+    z-index: 10;
+    background-color: rgba(23,104,172, .5);
+    padding: 10px;
+   
+}
+.ol-control{ bottom: 50px; right: 50px; top: auto; left: auto}
+.ol-control button{ width: 35px; height: 35px}
+
+#menu-featured-categories {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+  
+}
+
+li.menu-item-has-children{
+  padding: 10px 10px 10px 10px;
+  background: rgba(23,104,172, .5);
+  margin-bottom:3px;
+  font-size: 1em;color: #fff;
+}
+
+li.menu-item-has-children a{display: block; color: #fff}
+
+li.menu-item-has-children::after {
+  content: '\276F';
+  position: absolute;
+  right: 0;
+  padding-right: 20px; margin-top: -15px;
+}
+
+#ulcantones li.sub-menu-item a { color: fff;}
+#ulcantones .filtromenu input{ color: #000!important}
+
+#menu-featured-categories div.sub-menu {
+    display: none;
+}
+
+#menu-featured-categories div.visible {
+    display:block;
+}
+
+#menu-featured-categories div.visible{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  background: #F2F2F2;
+  border: 1px solid #F2F2F2;
+  z-index: 5;
+  -webkit-box-shadow: -1px -1px 1px -1px #C7C7C7; 
+  box-shadow: -1px -1px 1px -1px #C7C7C7;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.menu-item-has-children .filtromenu{
+   padding:3px 3px;
+}
+
+.filtromenu input.icon {
+    padding:5px; color: #000;
+}
+.filtromenu input.icon::-webkit-input-placeholder {
+    font-family:'FontAwesome';
+}
+
+.filtromenu input.icon::-moz-placeholder {
+    font-family:'FontAwesome';
+}
+
+.filtromenu input.icon::-ms-input-placeholder {
+    font-family:'FontAwesome';
+}
+
+ul.itemsubmenu{
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+ul.itemsubmenu li.sub-menu-item{
+    padding: 5px 5px 5px 10px;
+    font-size:0.9em;
+    /*background-color:black;*/
+}
+ul.itemsubmenu li.sub-menu-item a{ color: #120D53; cursor: pointer; display: block}
+ul.itemsubmenu li.sub-menu-item a:hover{ font-weight: bold; color: darkblue; cursor: pointer}
+
+li.menu-delete{
+    display: none;
+    font-size:0.8em !important;
+}
+
+li.menu-delete a{
+    color: #fff;
+}
+
+li.menu-especificacion{
+    display: none;
+    background-color: rgba(23,104,172, .3);
+    color: white !important;
+    font-size: 0.9em; padding: 15px
+}
+.menu-especificacion a{ display: block; text-align: center; border: 1px solid #ccc; margin: 10px 0px; padding: 15px; color: #fff}
+
+/*==========================================================PARA EL POPUP================================================*/
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    padding: 15px 25px 15px 15px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    width: 300px;
+}
+
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-content {
+    min-width: 170px;
+    max-height: 200px;
+    overflow-x: auto;
+}
+
+.ol-popup-closer {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 150%;
+    padding: 0 4px;
+    color: gray;
+    text-decoration: none;
+}
+
+.ol-popup-closer:after {
+    content: "\2716";
+}
+
+.ol-popup div.infoResult {
+    min-width: 130px;
+}
+
+.ol-popup div.infoResult p {
+    padding: 0.1em;
+    margin: 0;
+}
+
+.ol-popup-content h3 {
+    margin: 0.25em 0;
+}
+
+.ol-popup.marker {
+    margin-bottom: 30px;
+}
+
+
+/*==================================================VENTANA DE RESULTADOS ==============================*/
+
+.ventanaresultados{
+    position: absolute;
+    top: 25px;
+    left: -30px;
+    width: 800px;
+    height: Auto;
+    z-index: 10;
+    background-color: rgba(255,255,255, 1);
+    padding: 10px;
+    display: none;
+}
+
+.tableresultados tfoot{
+    text-align: right;
+}
+
