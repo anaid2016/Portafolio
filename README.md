@@ -1,7 +1,7 @@
 # Portafolio
 
 
-##About Me##
+# About Me
 
 * Desarrollador de Software
 * Lenguajes: PHP+JavaScript+Python+C#+Java Android
@@ -10,11 +10,6 @@
 * Tools: Git,
 * Server: Linux Redhat, Ubuntu, IIS Windows
 * AWS: Ec2
-
-
-**Indicadores (Mapa OpenStreet + JS)** ![(Clic aqui para visualizar Demo)](http://18.223.105.203:8086/production/sure)
-
-Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores de una empresa con varias sucursales.
 
 
 
@@ -39,15 +34,22 @@ GetDataSite
 	SO
 		* Linux Ubuntu 18
 		
-		
-	Esquema General de Arquitectura
-
-	
 	
 Backend
 	
 	
 	Lenguajes
+	
+		* PHP 7.2
+		* Python 3.10
+	
+	
+	Servidor
+	
+		* AWS Ec2
+		* Linux Ubuntu Server
+		
+	
 	
 	Framework
 		* Yii2 Basic
@@ -63,21 +65,33 @@ Backend
 		
 	REST-API
 		* Insert Data (POST) con Autenticación Baren Token
-		* Select Data (GET)
+		* Select Data (GET) con Autenticaion Baren Token
 		
 			
-
+	TEST
+		* PHPUnit
+	
+	
 
 Frontend 
 
 	Framework
-		* Vue
+		* VueJs
 		
+		
+
+		
+**Indicadores (Mapa OpenStreet + JS)** ![(Clic aqui para visualizar Demo)](http://201.221.158.150:8080/pruebaspostgresql/web/index.php)
+
+Objetivo:  Integrar un mapa al framework Yii2 que permita visualizar los indicadores con varios puntos de atención.
+
+	- Base de Datos PostgreSQL
+	- PHP 5.6 (Actualmente se encuentra en migración a 7.2)
+	- Framework Yii2
+	- OpenStreet MAP
+	- JQuery
+	- Programación MVC
 	
-
-**BLE (Android Studio)** (Video Funcionalidad)
-
-
 
 
 **Inventario RFID Textiles:**
@@ -119,6 +133,11 @@ Frontend
 
 
 
+**Otros Desarrollos:** 
+
+	* Formularios Dinamicos YI22 PHP , Para la gestión y administración de recursos y clientes
+	* APP Android With BLE for ProCanbus Alarm Vehicular
+	* APP Android With BLE for Radar Velocity Integration
 
 
 
