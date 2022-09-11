@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-png" href="./img/logos/sure.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-chartjs@2.5.7-rc3/dist/vue-chartjs.full.min.js"> </script>
+    <script src="./componentes/modal.js?v2.4"></script>
+    <script src="./componentes/estadisticas.js"></script>
+    <script src="./componentes/grafica-dias.js?v1"></script>
+    <script src="./componentes/grafica-mes.js?v1"></script>
+    <script src="./componentes/configuracion.js"></script>
+    <script src="./componentes/ahorro_energia.js"></script>
+    <title>S.U.R.E</title>
+</head>
+<body>
+    <div id="app">
+    <modal v-if="modal" @verifica="modal = $event" @cargardatos_dia="getDatos_dia($event)" @cargardatos_mes="getDatos_mes($event)"></modal>
+    <m-estadisticas @close="modal_estadisticas = false" v-if="modal_estadisticas" :vector_dia="objdias" :vector_mes="objmes" @verifica="modal = $event"></m-estadisticas>
+    <m-config @close="modal_configuracion = false" v-if="modal_configuracion" @verifica="modal = $event" :vector_dia="objdias"></m-config>
+    <m-ahorro v-if="modal_ahorro" @close="modal_ahorro = false"></m-ahorro>
+    <div class="container">
+        <nav class="navbar d-flex justify-content-end bg-transparent">
+            <div class="">
+                <div id="login">
+                     {{user_login}} 
+                </div> 
+                <div class="c-sampm d-flex text-left justify-content-end">
+                    <div id="contenedor_hora">{{hora_vista}}</div>  
+                    <div id="contenedor_ampm">{{min_ampm}}</div> 
+                    <!-- <div id="contenedor_segundos">{{segundos}}</div>  -->
+                </div>
+                <div class="cerrars">
+                    <button class="btn-salir" @click="cerrar()"><img src="./img/cerrar-sesion.png" alt="" style="margin-top: -4px;"> Cerrar</button>
+                </div>
+            </div>
+        </nav>
+        <div class="row row-principal">
+            <div class="fg-1 form-group col-lg-6 col-md-12 d-flex justify-content-center">
+                <img src="./img/txt01.svg" id="txt-01" alt="">
+                <img src="./img/txt01-responsive.svg" id="txt-01-responsive" alt="">
+                <div class="circle1">
+                    <div class="circle2">
+                        <img src="./img/dibujo.svg" width="100%" alt="">                              
+                        <div class="circle3">
+                            <div class="d-flex justify-content-center align-items-center"  v-if="spinnerConsumos_dia">
+                                <div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div>                            
+                            </div>
+                            <div class="d-flex flex-column text-center" style="width: 100%;" v-else>
+                                <div class="tab1">
+                                    <h2 class="color--grey">$</h2>
+                                    <h3 class="c-h3">$ {{ nf.format(costo_cosumo_diario) }}</h3>
+                                </div>
+                                <div id="indicador-1" :style="reloj1">
+                                    <img src="./img/indicador.svg" class="indicador"  alt="">
+                                </div>
+                                <div class="tab2 p-2">
+                                    <h4>{{ cosumo_diario_kwh }} kWh</h4>
+                                </div>
+                                <div class="tab3 p-2">
+                                    <p class="color--grey">{{fecha_hoy}}</p>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="circle__potencia">
+                    <img src="./img/txt-fpotencia.svg" id="txt-fp">
+                    <img src="./img/f-potencia.svg" width="100%" style="z-index: 1;">   
+                    <div class="circle__potencia__hijo">
+                        <div class="spinner-grow" role="status" v-if="spinnerAmperios"></div>
+                        <div v-else class="text-center">
+                            <p id="amperios">{{kwh}}[kW]</p>
+                        </div>
+                    </div>                                   
+                </div>                      
+                <div class="circle__tips">
+                    <a @click="ver_ahorro">
+                        <div class="circle__tips_hijo">
+                            <img src="./img/f-tips.svg" width="100%" id="tips-img">
+                            <img src="./img/f-tips-hover.svg" width="100%" id="tips-img-hover">
+                        </div> 
+                    </a>
+                </div>                      
+            </div>
+            <div class="fg-2 form-group col-lg-6 col-md-12 d-flex justify-content-center">
+                <img src="./img/txt02.svg" id="txt-02" alt="">
+                <img src="./img/txt02-responsive.svg" id="txt-02-responsive" alt="">                
+                <div class="circle1">
+                    <div class="circle2">
+                        <img src="./img/dibujo.svg" width="100%">                 
+                        <div class="circle3">
+                            <div class="d-flex justify-content-center align-items-center"  v-if="spinnerConsumos_mes">
+                                <div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div>                          
+                            </div>
+                            <div class="d-flex flex-column text-center" style="width: 100%;" v-else>
+                                <div class="tab1">
+                                    <h2 class="color--grey">$</h2>
+                                    <h3 class="c-h3">$ {{ nf.format(costo_cosumo_mensual) }}</h3>
+                                </div>
+                                <div id="indicador-2" :style="reloj2">
+                                    <img src="./img/indicador.svg" class="indicador" alt="">
+                                </div>
+                                <div class="tab2 p-2">
+                                    <h4>{{cosumo_mensual_kwh}} [kWh] / {{cosumo_mensual_reactiva}} [kVArh]</h4>
+                                </div>
+                                <div class="tab3 p-2">
+                                    <p class="color--grey">{{mes_hoy}}</p>
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="form-group col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-6 col-md-12 d-flex">
+                        <div class="div-btn-green d-flex align-items-center" role="button" @click="ver_estadisticas()">
+                            <button class="primary btn-circle btn-green" ><i class="fa fa-area-chart"></i></button>&nbsp;Estadisticas
+                        </div>
+                        <!-- <div class="div-btn-orange d-flex align-items-center">
+                            <button class="btn-circle btn-orange" @click="ver_config()"><i class="fa fa-cog"></i></button>&nbsp;Configuración
+                        </div> -->
+                        <div class="logo d-flex">
+                            <img src="./img/logo.svg" width="100%">
+                            <div class="circulo-logo">
+                                <div class="circulo-logo-img">
+                                    <img :src="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                                
+        </div>
+    </div>     
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="js/jQueryRotate.2.2.js" type="text/javascript"></script>
+<script>
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    hora_vista:"",
+    segundos:"",
+    min_ampm:"",
+    modal:true,
+    modal_estadisticas:false,
+    modal_configuracion:false,
+    modal_ahorro:false,
+    costo_cosumo_diario:0,
+    costo_cosumo_mensual:0,
+    cosumo_diario_kwh: 0,
+    cosumo_mensual_kwh:0,
+    amperios:0,
+    kwh:0,
+    user_login:'',
+    spinnerConsumos_dia:true,
+    spinnerConsumos_mes:true,
+    spinnerAmperios:true,
+    nf: Intl.NumberFormat("de-DE"),
+    img: './img/logos/sure.png',
+    reloj1: 0,
+    reloj2: 0,
+    id_tarjeta:0,
+    modbusposition:0,
+    name_home:'',
+    objdias:[],
+    objmes:[]
+  },
+  methods:{
+    cerrar(){
+        window.location.href = "https://18.223.105.203/development/sure/"
+    },
+    getHour(){
+    var Digital=new Date();
+    var hours=Digital.getHours();
+    var minutes=Digital.getMinutes();
+    var seconds=Digital.getSeconds();
+
+    var dn="AM" 
+    if (hours>12){
+            dn="PM"
+            hours=hours-12
+    }
+    if (hours==0)
+            hours=12
+    if (minutes<=9)
+            minutes="0"+minutes
+    if (seconds<=9)
+            seconds="0"+seconds
+
+    hora=hours+":"+minutes+":"+seconds+" "+dn;
+
+    //Colocando en los Div========================================================================
+    this.hora_vista = hours+":"+minutes;
+    this.segundos = seconds;
+    this.min_ampm = dn;
+    setTimeout(() => this.getHour(), 1000);
+    
+    },
+    getDatos_dia(dato){
+        
+        this.user_login = dato[2]
+        const token = 'WMSAS00498-984B-5BCC-123C-AC22B47E4CD4-token'
+        var Digital=new Date();
+        var dia = Digital.getDate();
+        var mes = Digital.getMonth()+1;
+        if(mes<10){
+            mes = "0"+mes
+        }
+        if(dia<10){
+            dia = "0"+dia
+        }        
+        var anio = Digital.getFullYear();
+        var factual = anio+'-'+mes+'-'+dia;
+
+            let params = {
+                circuito_id: dato[1],
+                fecha : factual
+            };
+            let reloj1=0;           //periodo actual
+            // api por dia -----------------------------------------
+            axios.post("https://18.223.105.203/development/sge/basic/api/web/v1/sgelecturas/search", params ,{
+                headers: { 
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then((res) => {
+                if(res.data!=0){                    
+                    this.spinnerConsumos_dia = false
+                    this.spinnerAmperios = false
+                    this.costo_cosumo_diario =(res.data.Total_activa*res.data.Valor_cto)
+                    this.cosumo_diario_kwh = res.data.Total_activa
+                    this.kwh = res.data.Potencia
+                    this.fecha_hoy = res.data.Ultima_fecha.split(' ')[0]    
+                    reloj1 = (220 / res.data.Maxactiva) * res.data.Total_activa
+                    this.reloj1='transform: rotate('+parseInt(reloj1)+'deg);';
+                    console.log({'Por Dia' : res.data})
+                }
+                    this.get_dias_grafica(dato[1])
+            });
+            setTimeout(() => this.getDatos_dia(dato), 60000);
+    },
+    async getDatos_mes(dato){
+        
+        let fecha;
+        let params = {
+            circuito_id: dato[1]
+                };      
+
+        let reloj2=0;
+        const token = 'WMSAS00498-984B-5BCC-123C-AC22B47E4CD4-token'
+
+         // api por mes ------------------------------------------
+        let res = await axios.post("https://18.223.105.203/development/sge/basic/api/web/v1/sgelecturas/searchmes", params ,{
+             headers: { 
+                 'Authorization': `Bearer ${token}`
+             }
+         });
+         if(res.data!=0){           
+            console.log({'Por Mes' : res.data})
+            reloj2 = (220 / (res.data.Maxactiva*30)) * res.data.Total_activa
+            this.reloj2='transform: rotate('+parseInt(reloj2)+'deg);';             
+            this.costo_cosumo_mensual = (res.data.Total_activa*res.data.Valor_cto)
+            this.cosumo_mensual_kwh = res.data.Total_activa  
+            fecha = res.data.Ultima_fecha.split(' ')[0]    
+            this.mes_hoy = fecha.split('-')[0]+'-'+fecha.split('-')[1]         
+            this.img = './img/logos/'+res.data.Imagenasociada+'.png'
+            this.get_mes_grafica(dato[1])
+            this.spinnerConsumos_mes = false
+         }
+         setTimeout(() => this.getDatos_mes(dato), 60000);
+
+    },
+    get_dias_grafica(id){
+        let params = {
+          circuito_id: id
+        }; 
+        const token = 'WMSAS00498-984B-5BCC-123C-AC22B47E4CD4-token'
+        axios.post("https://18.223.105.203/development/sge/basic/api/web/v1/sgelecturas/searchgrafica", params ,{
+          headers: { 
+              'Authorization': `Bearer ${token}`
+          }
+      }).then((res) => {
+          this.objdias=res.data
+        });
+    },     
+    get_mes_grafica(id){
+        let params = {
+          circuito_id: id
+        }; 
+        const token = 'WMSAS00498-984B-5BCC-123C-AC22B47E4CD4-token'
+        axios.post("https://18.223.105.203/development/sge/basic/api/web/v1/sgelecturas/searchmesgrafica", params ,{
+          headers: { 
+              'Authorization': `Bearer ${token}`
+          }
+      }).then((res) => {
+          this.objmes=res.data
+        });
+    },     
+    ver_estadisticas(){
+        this.modal_estadisticas = true
+    },
+    ver_config(){
+        this.modal_configuracion = true
+        this.vector_dia = [this.id_tarjeta,this.modbusposition,this.name_home,this.ustarjetid]
+    },
+    ver_ahorro(){
+        this.modal_ahorro = true
+        this.vector_dia = [this.id_tarjeta,this.modbusposition,this.name_home]
+    }
+  },
+  created(){
+      this.getHour()
+  },mounted(){
+    $("#indicador-1").rotate({animateTo:1});
+    $("#indicador-2").rotate({animateTo:28});
+  }
+})
+
+</script>
+</body>
+</html>

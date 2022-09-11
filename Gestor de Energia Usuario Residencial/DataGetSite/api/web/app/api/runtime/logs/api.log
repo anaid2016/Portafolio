@@ -1,0 +1,68 @@
+2021-05-25 09:40:46 [177.254.57.202][-][d1n97m8u9hkhq1hst0egf6urrc][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The "modelClass" property must be set. in /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/rest/ActiveController.php:65
+Stack trace:
+#0 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\rest\ActiveController->init()
+#1 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/Controller.php(98): yii\base\BaseObject->__construct()
+#2 [internal function]: yii\base\Controller->__construct()
+#3 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/di/Container.php(412): ReflectionClass->newInstanceArgs()
+#4 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build()
+#5 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#6 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/Module.php(648): yii\BaseYii::createObject()
+#7 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/Module.php(602): yii\base\Module->createControllerByID()
+#8 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/Module.php(594): yii\base\Module->createController()
+#9 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController()
+#10 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction()
+#11 /var/www/html/development/autogenerador/dev_v1/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Application->handleRequest()
+#12 /var/www/html/development/autogenerador/dev_v1/api/web/index.php(24): yii\base\Application->run()
+#13 {main}
+2021-05-25 09:40:46 [177.254.57.202][-][d1n97m8u9hkhq1hst0egf6urrc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd1n97m8u9hkhq1hst0egf6urrc'
+    '_csrf' => 'd12436fa1fb9d654a5329ccf5933ed49084ef815bbcde71f40691d408bdcd50da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LqBhUTLu7bJEnuowJbnn0TCCfv6MCYdc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '117f9e3c-81a8-46f9-a109-4f7a7d424da7'
+    'HTTP_HOST' => '18.223.105.203:8086'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '84'
+    'HTTP_COOKIE' => 'PHPSESSID=d1n97m8u9hkhq1hst0egf6urrc; _csrf=d12436fa1fb9d654a5329ccf5933ed49084ef815bbcde71f40691d408bdcd50da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LqBhUTLu7bJEnuowJbnn0TCCfv6MCYdc%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at 18.223.105.203 Port 8086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => '18.223.105.203'
+    'SERVER_ADDR' => '172.31.43.125'
+    'SERVER_PORT' => '8086'
+    'REMOTE_ADDR' => '177.254.57.202'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/development/autogenerador/dev_v1/api/web/index.php'
+    'REMOTE_PORT' => '62283'
+    'REDIRECT_URL' => '/development/autogenerador/dev_v1/api/web/v1/sfvsites/insertar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/development/autogenerador/dev_v1/api/web/v1/sfvsites/insertar'
+    'SCRIPT_NAME' => '/development/autogenerador/dev_v1/api/web/index.php'
+    'PHP_SELF' => '/development/autogenerador/dev_v1/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1621953646.528
+    'REQUEST_TIME' => 1621953646
+]

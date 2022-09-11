@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Radarstat</string>
+    <string name="tipos">TIPOS</string>
+    <string name="carpetas">CARPETAS</string>
+    <string name="conexion">Conexion</string>
+    <string name="reporte">REPORTE</string>
+    <string name="mediciones">MEDICIONES</string>
+    <string name="agregar">AGREGAR</string>
+    <string name="title_activity_addtipo">AddtipoActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="gps_permisos">La aplicación tendrá acceso al GPS</string>
+    <string name="abrir_gps">SI</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="error_bluetooth_not_supported">BLE No Soportado o Apagado</string>
+    <string name="reintentar">REINTENTAR</string>
+    <string name="seleccione_carpeta">Seleccione Carpeta</string>
+</resources>

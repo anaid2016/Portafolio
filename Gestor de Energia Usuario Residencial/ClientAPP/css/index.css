@@ -1,0 +1,861 @@
+body {
+  background-image: url('../img/fondo.svg');
+  background-size: contain;
+  font-size: 30px;
+  height: 100vh;
+}
+
+.bg-dark-modal{
+  background: #00000047;
+  backdrop-filter: blur(20px);
+}
+
+.bg-dark-modal p {
+  font-size: 20px;
+}
+
+.row-principal{
+  margin-top: 30px;
+}
+
+.circle1 {
+  position: relative;
+  width: 550px;
+  padding: 18px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 25px #666666;
+}
+
+.circle2 {
+  width: 550px;
+  background: radial-gradient(white 62%, rgb(59, 59, 59), grey);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.circle3 {
+  margin-top: 60px;
+  width: 380px;
+  height: 380px;
+  padding: 20px;
+  background: radial-gradient(white 62%, rgb(59, 59, 59), grey);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.tab1 {
+  border-bottom: 2px solid #ccc;
+  font-family: 'Rubik', sans-serif;
+  z-index: 1;
+}
+
+.tab2 {
+  font-family: 'Rubik', sans-serif;
+  border-top: 2px solid #ccc;
+  font-size: 25px;
+}
+.tab3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  border-top: 2px solid #ccc;
+}
+
+.color--grey {
+  color: grey;
+}
+
+.indicador {
+  margin-left: -60px;
+}
+
+.fg-1 {
+  padding-right: 0px !important;
+}
+
+.fg-2 {
+  padding-left: 0px !important;
+}
+
+#txt-01 {
+  position: absolute;
+  margin-top: 5px;
+  margin-right: 388px;
+}
+
+#txt-01-responsive {
+  display: none;
+}
+
+#txt-02 {
+  position: absolute;
+  margin-top: 26px;
+  margin-left: 442px;
+}
+
+#txt-02-responsive {
+  display: none;
+}
+
+.circle__potencia {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 25px #666666;
+  margin-top: 460px;
+  margin-right: 265px;
+  font-size: 30px;
+}
+
+.circle__tips {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 25px #666666;
+  margin-top: 460px;
+  margin-left: 265px;
+}
+
+.circle__tips_hijo {
+  width: 190px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
+
+.circle__potencia__hijo {
+  width: 162px;
+  height: 162px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  position: absolute;
+  background: #DFFFBF;
+  align-items: center;
+  color: #326168;
+}
+
+#txt-fp {
+  position: absolute;
+  margin-bottom: 30px;
+  margin-right: 216px;
+}
+
+.logo {
+  width: 430px;
+  margin-top: 10px;
+  margin-left: 160px;
+}
+
+.circulo-logo {
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 25px #666666;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: -25px;
+}
+
+.circulo-logo-img {
+  width: 100%;
+  height: 100%;
+  background-color: #bce561;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circulo-logo-img img {
+  height: 100%;
+  width: auto;
+}
+
+#tips-img-hover {
+  display: none;
+}
+
+.circle__tips:hover #tips-img-hover {
+  display: block;
+}
+
+.circle__tips:hover #tips-img {
+  display: none;
+}
+
+#contenedor_hora {
+  color: #666600;
+  font-size: 18px;
+  text-align: end;
+  font-weight: bold;
+}
+
+#contenedor_segundos {
+  color: #666600;
+  font-size: 20px;
+  text-align: end;
+  font-weight: bold;
+}
+
+#contenedor_ampm {
+  color: #E1B926;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.c-sampm{
+  margin-top: -15px;
+}
+
+#login{
+  margin-top: -12px;
+  margin-bottom: 5px;
+  text-align: end;
+  color: white;
+  color: #666600;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.cerrars{
+  text-align: end;
+}
+.btn-salir{
+  background: #a58619b8;
+  border-radius: 5px;
+  border: 0;
+  font-size: small;
+  color: white;
+  padding: 4px 4px 4px 4px;
+}
+
+#amperios{
+  font-size:1em;
+  font-weight: bold;
+  color: #326168;
+}
+
+#kwh{
+  font-size:0.5em;
+  color: #326168;
+}
+
+.c-h3{
+  font-weight: bold;
+  color: #326168;
+}
+
+.my-modal{
+  width: 100% !important;
+  max-width: 1200px !important;
+}
+.my-modal-ahorra{
+  width: 100% !important;
+  max-width: 700px !important;
+}
+.m-content{
+  width: 100% !important;
+}
+
+.m-content-ahorra{
+  width: 100% !important;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+.btn-green{
+  background: #f7d044;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-btn-green{
+  position: absolute;
+  margin-left: 513px;
+  margin-top: -100px;  
+}
+.div-btn-orange{
+  position: absolute; 
+  margin-left: 470px;
+  margin-top: -63px;     
+}
+.btn-orange{
+  background: #85A130;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+
+
+@media (max-width: 1400px) {
+
+  .row-principal{
+    margin-top: -86px;
+    padding: 0px 60px 0px 60px;
+  }
+
+  .circle1 {
+    position: relative;
+    width: 450px;
+    padding: 18px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px #666666;
+  }
+  
+  .circle2 {
+    width: 450px;
+    background: radial-gradient(white 62%, rgb(59, 59, 59), grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .circle3 {
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    padding: 18px;
+    background: radial-gradient(white 62%, rgb(59, 59, 59), grey);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+  
+  .tab1 {
+    border-bottom: 2px solid #ccc;
+    font-family: 'Rubik', sans-serif;
+    z-index: 1;
+  }
+  
+  .tab2 {
+    font-family: 'Rubik', sans-serif;
+    border-top: 2px solid #ccc;
+    font-size: 18px;
+  }
+  .tab3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    border-top: 2px solid #ccc;
+  }
+  
+  .color--grey {
+    color: grey;
+  }
+  
+  .indicador {
+    margin-left: -60px;
+  }
+  
+  .fg-1 {
+    padding-right: 0px !important;
+  }
+  
+  .fg-2 {
+    padding-left: 0px !important;
+  }
+  
+  #txt-01 {
+    position: absolute;
+    margin-top: -10px;
+    margin-right: 308px;
+  }
+  
+  #txt-01-responsive {
+    display: none;
+  }
+  
+  #txt-02 {
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 355px;
+  }
+  
+  #txt-02-responsive {
+    display: none;
+  }
+  
+  .circle__potencia {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px #666666;
+    margin-top: 360px;
+    margin-right: 265px;
+    font-size: 30px;
+  }
+  
+  .circle__tips {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px #666666;
+    margin-top: 360px;
+    margin-left: 265px;
+  }
+  
+  .circle__tips_hijo {
+    width: 190px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .circle__potencia__hijo {
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    background: #DFFFBF;
+    align-items: center;
+    color: #326168;
+  }
+  
+  #txt-fp {
+    position: absolute;
+    margin-bottom: 30px;
+    margin-right: 192px;
+    /* margin-right: 216px; */
+  }
+  
+  .logo {
+    width: 430px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  
+  .circulo-logo {
+    width: 130px;
+    height: 130px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px #666666;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -28px;
+  }
+  
+  .circulo-logo-img {
+    width: 100%;
+    height: 100%;
+    background-color: #bce561;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .circulo-logo-img img {
+    height: 100%;
+    width: auto;
+  }
+  
+  #tips-img-hover {
+    display: none;
+  }
+  
+  .circle__tips:hover #tips-img-hover {
+    display: block;
+  }
+  
+  .circle__tips:hover #tips-img {
+    display: none;
+  }
+  
+  #contenedor_hora {
+    color: #666600;
+    font-size: 18px;
+    text-align: end;
+    font-weight: bold;
+  }
+  
+  #contenedor_segundos {
+    color: #666600;
+    font-size: 20px;
+    text-align: end;
+    font-weight: bold;
+  }
+  
+  #contenedor_ampm {
+    color: #E1B926;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .c-sampm{
+    margin-top: -15px;
+  }
+  
+  #login{
+    margin-top: -12px;
+    margin-bottom: 5px;
+    text-align: end;
+    color: white;
+    color: #666600;
+    font-weight: 500;
+    font-size: 35px;
+  }
+  
+  #amperios{
+    font-size:1em;
+    font-weight: bold;
+    color: #326168;
+  }
+  
+  #kwh{
+    font-size:0.5em;
+    color: #326168;
+  }
+  
+  .c-h3{
+    font-weight: bold;
+    color: #326168;
+  }
+  
+  .my-modal{
+    width: 100% !important;
+    max-width: 1200px !important;
+  }
+  .m-content{
+    width: 100% !important;
+  }
+  
+  .btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+  }
+  
+  .btn-green{
+    background: #f7d044;
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .div-btn-green{
+    position: absolute;
+    margin-left: 414px;
+    margin-top: -100px;  
+  }
+  .div-btn-orange{
+    position: absolute; 
+    margin-left: 375px;
+    margin-top: -63px;     
+  }
+  .btn-orange{
+    background: #85A130;
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }  
+
+}
+
+@media (max-width: 1020px) {
+  
+  .row-principal{
+    margin-top: -86px;
+    padding: 0px 60px 0px 60px;
+  }
+  .div-btn-green{
+    position: absolute;
+    margin-left: 370px;
+    margin-top: -100px;  
+  }
+  .div-btn-orange{
+    position: absolute; 
+    margin-left: 332px;
+    margin-top: -63px;     
+  }
+  .row-principal{
+    margin-top: -10px;
+  }
+
+  .circulo-logo {
+    width: 120px;
+    height: 120px;
+    margin-left: 255px;
+    margin-top: -45px;
+  }
+
+  .fg-1 {
+    padding-right: 15px !important;
+    margin-bottom: 181px !important;
+  }
+
+  .circulo-logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 470px;
+    margin-top: -20px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  #tips-img-hover {
+    display: block;
+  }
+
+  #tips-img {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .circulo-logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 400px;
+    margin-top: -20px;
+  }
+
+  .div-btn-green{
+    position: absolute;
+    margin-left: 458px;
+    margin-top: -100px;  
+  }
+  .div-btn-orange{
+    position: absolute; 
+    margin-left: 418px;
+    margin-top: -63px;     
+  }  
+
+}
+
+
+@media (max-width: 759px) {
+
+  .div-btn-green{
+    position: absolute;
+    margin-left: 362px;
+    margin-top: -100px;  
+  }
+  .div-btn-orange{
+    position: absolute; 
+    margin-left: 327px;
+    margin-top: -63px;     
+  }   
+
+  .fg-1 {
+    padding-right: 15px !important;
+    margin-bottom: 181px !important;
+  }
+
+  .fg-2 {
+    padding-left: 15px !important;
+  }
+
+  .circle1 {
+    width: 400px;
+  }
+
+  .circle2 {
+    width: 400px;
+  }
+
+  .circle3 {
+    width: 260px;
+    height: 260px;
+  }
+
+  #txt-01 {
+    display: none;
+  }
+
+  #txt-01-responsive {
+    display: block;
+    position: absolute;
+    margin-top: -23px;
+    margin-right: 198px;
+  }
+
+  #txt-02 {
+    display: none;
+  }
+
+  #txt-02-responsive {
+    display: block;
+    position: absolute;
+    margin-top: -22px;
+    margin-right: 223px;
+  }
+
+  .circle__potencia {
+    width: 190px;
+    height: 190px;
+    margin-top: 320px;
+    margin-right: 200px;
+  }
+
+  .circle__tips {
+    width: 190px;
+    height: 190px;
+    margin-top: 320px;
+    margin-left: 200px;
+  }
+
+  .circle__tips_hijo {
+    width: 184px;
+  }
+
+  #txt-fp {
+    margin-top: 197px;
+    margin-right: 128px;
+    transform: rotate(-60deg);
+  }
+
+  .circulo-logo {
+    width: 120px;
+    height: 120px;
+    margin-left: 263px;
+    margin-top: -30px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 542px) {
+
+  body{
+    height: 100%;
+    background-size: cover;
+  }
+
+  .bg-dark-modal p {
+    font-size: 15px;
+  }
+
+  .logo{
+    margin-top: 70px;
+  }
+
+  .div-btn-green{
+    position: absolute;
+    margin-left: 275px;
+    margin-top: -45px;  
+  }
+  .div-btn-orange{
+    position: absolute; 
+    margin-left: 236px;
+    margin-top: -14px;     
+  }
+
+  .circulo-logo {
+    width: 110px;
+    height: 110px;
+    margin-left: 230px;
+    margin-top: -40px;
+  }
+    
+  .tab3{
+    border-top: none;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .circulo-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: 180px;
+    margin-top: -20px;
+  }
+
+  .div-btn-green{
+    position: absolute;
+    margin-left: 210px;
+    margin-top: -25px;  
+  }
+  .div-btn-orange{
+    position: absolute; 
+    margin-left: 170px;
+    margin-top: 2px;     
+  }
+}

@@ -1,0 +1,424 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+namespace app\api\modules\v1\controllers;
+
+use Exception;
+use yii;
+use yii\rest\ActiveController;
+use yii\filters\auth\CompositeAuth;
+use yii\filters\auth\HttpBasicAuth;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\auth\QueryParamAuth;
+use yii\data\ActiveDataProvider;
+use yii\helpers\Json;
+
+
+/**
+ * Description of SfvalarmaController
+ *
+ * @author ANAID
+ */
+class SgelecturasController extends ActiveController
+{
+
+
+    public $modelClass = 'app\models\SgeLecturas';
+
+    
+    public function behaviors()     {
+        $behaviors = parent::behaviors(); 
+
+        // remove authentication filter         
+        unset($behaviors['authenticator']);   
+
+        $behaviors['corsFilter'] = [     
+            'class' => \yii\filters\Cors::class,
+            'cors'  => [
+                    'Origin' => ['*'], 
+                    'Access-Control-Request-Method'    => ['POST', 'GET', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'], 
+                    'Access-Control-Allow-Headers' => ['Origin', 'X-Requested-With', 'Content-Type', 'accept', 'Authorization'], 
+                    'Access-Control-Request-Headers' => ['*'],    
+                    'Access-Control-Max-Age'           => 3600, // Cache (seconds) 
+                    // Allow the X-Pagination-Current-Page header to be exposed to the browser.             
+                    'Access-Control-Expose-Headers' => ['X-Pagination-Total-Count', 'X-Pagination-Page-Count', 'X-Pagination-Current-Page', 'X-Pagination-Per-Page'] 
+            ] 
+        ];           
+
+
+        
+        return $behaviors;
+   } 
+    
+    
+
+   /* public function behaviors()
+    {
+        
+        
+        $behaviors = parent::behaviors();
+        
+       
+        $isAuthenticationRequired = \Yii::$app->params['isApiAuthenticationEnabled'];
+
+        if ($isAuthenticationRequired) {
+            // Required for API authentication
+            $behaviors['authenticator'] = [
+                // HTTP Basic Authentication
+                // header('Authorization: Basic '. base64_encode("user:password"));
+                //'class' => HttpBasicAuth::className(),
+
+                // Composite Authentication
+                'class' => CompositeAuth::className(),
+                'authMethods' => [
+                    HttpBasicAuth::className(),    // header('Authorization: Basic '. base64_encode("user:password"));
+                    HttpBearerAuth::className(),   // header('Authorization: Bearer '. $token);
+                    QueryParamAuth::className(),   // https://example.com/cms/api/v1/entries?access-token=xxxxxxxx
+                ],
+            ];
+        }
+
+        return $behaviors;
+    }*/
+
+    
+     
+
+    public function actionSearch()
+    {
+        $post = \Yii::$app->request->rawBody;
+        $recp_json = json_decode($post, true);
+
+        $medidor_id = $recp_json['circuito_id'];
+        $fecha = $recp_json['fecha'];
+
+
+        $_count = "SELECT count(*) from sge_medidores left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id where (sge_lecturas.fecha_hora_registro >= '" . $fecha . " 00:00:01' and  sge_lecturas.fecha_hora_registro <= '" . $fecha . " 24:00:00') and sge_medidores.medidor_id = " . $medidor_id . " and energia_activa>0";
+
+        $_sql = " SELECT *
+        from sge_medidores
+        left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id
+        left join sge_circuitos on sge_circuitos.circuitos_id = sge_medidores.circuito_id
+        where sge_lecturas.fecha_hora_registro >= :fecha_hora_inicio and sge_lecturas.fecha_hora_registro <= :fecha_hora_final
+        and sge_medidores.medidor_id = :medidor_id and energia_activa>=0 order by sge_lecturas.fecha_hora_registro asc";
+
+        $count = Yii::$app->db->createCommand($_count)->queryScalar();
+
+
+        $provider = new \yii\data\SqlDataProvider([
+            'sql' => $_sql,
+            'params' => [':medidor_id' => $medidor_id, ':fecha_hora_inicio' => $fecha . ' 00:00:01', ':fecha_hora_final' => $fecha . ' 24:00:00'],
+            'totalCount' => $count,
+            'pagination' => false
+        ]);
+
+
+
+        if ($provider->getCount() <= 0) {
+            return 0;
+        } else {
+
+            $result = json_decode(json_encode($provider->getModels()));
+
+            $nf = count($result) - 1;
+
+            $total_activa = $result[$nf]->energia_activa - $result[0]->energia_activa;
+            $total_reactiva = $result[$nf]->energia_reactiva - $result[0]->energia_reactiva;
+            $ultimafecha = $result[$nf]->fecha_hora_registro;
+            $valorcto = $result[$nf]->valorkWh;
+            $potencia = $result[$nf]->activainstotal;
+            $maxactivadia = $result[$nf]->maxactivadia;
+            $imgasociada = $result[$nf]->imagenasociada;
+
+            return ['Total_activa' => round($total_activa, 2), 'Total_reactiva' => round($total_reactiva, 2), 'Ultima_fecha' => $ultimafecha, 'Valor_cto' => $valorcto, 'Potencia' => $potencia, 'Maxactiva' => $maxactivadia, 'Imagenasociada' => $imgasociada];
+        }
+    }
+
+    public function actionSearchgrafica()
+    {
+        $post = \Yii::$app->request->rawBody;
+        $recp_json = json_decode($post, true);
+
+        $medidor_id = $recp_json['circuito_id'];
+        $fecha = date("Y-m-d", strtotime(date("Y-m-d") . "+ 1 days"));
+
+        $objvalor = [];
+
+        for ($i = 1; $i <= 6; $i++) {
+
+            $fecha = date("Y-m-d", strtotime($fecha . "- 1 days"));
+
+            $_count = "SELECT count(*) from sge_medidores left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id where (sge_lecturas.fecha_hora_registro >= '" . $fecha . " 00:00:01' and  sge_lecturas.fecha_hora_registro <= '" . $fecha . " 24:00:00') and sge_medidores.medidor_id = " . $medidor_id . " and energia_activa>0";
+
+            $_sql = " SELECT *
+        from sge_medidores
+        left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id
+        left join sge_circuitos on sge_circuitos.circuitos_id = sge_medidores.circuito_id
+        where sge_lecturas.fecha_hora_registro >= :fecha_hora_inicio and sge_lecturas.fecha_hora_registro <= :fecha_hora_final
+        and sge_medidores.medidor_id = :medidor_id and energia_activa>=0 order by sge_lecturas.fecha_hora_registro asc";
+
+            $count = Yii::$app->db->createCommand($_count)->queryScalar();
+
+
+            $provider = new \yii\data\SqlDataProvider([
+                'sql' => $_sql,
+                'params' => [':medidor_id' => $medidor_id, ':fecha_hora_inicio' => $fecha . ' 00:00:01', ':fecha_hora_final' => $fecha . ' 24:00:00'],
+                'totalCount' => $count,
+                'pagination' => false
+            ]);
+
+
+            if ($provider->getCount() <= 0) {
+                $objvalor['Fechas'][] = date("m-d", strtotime($fecha));
+                $objvalor['Costos'][] = 0;
+            } else {
+
+                $result = json_decode(json_encode($provider->getModels()));
+
+
+                $nf = count($result) - 1;
+
+                $valorcto = $result[$nf]->valorkWh;
+                $total_activa = $result[$nf]->energia_activa - $result[0]->energia_activa;
+
+
+                $objvalor['Fechas'][] = date("m-d", strtotime($fecha));
+                $objvalor['Costos'][] = ($valorcto * $total_activa);
+            }
+        }
+        return $objvalor;
+    }
+
+    public function actionSearchmes()
+    {
+        $post = \Yii::$app->request->rawBody;
+        $recp_json = json_decode($post, true);
+
+        $medidor_id = $recp_json['circuito_id'];
+
+        $_count = "SELECT count(*) from sge_medidores left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id where (sge_lecturas.fecha_hora_registro >= '" . date("Y-m-01") . "' and sge_lecturas.fecha_hora_registro <= '" . date("Y-m-t") . "') and sge_medidores.medidor_id = " . $medidor_id . " and energia_activa>=0 ";
+
+        $_sql = " SELECT *
+        from sge_medidores
+        left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id
+        left join sge_circuitos on sge_circuitos.circuitos_id = sge_medidores.circuito_id
+        where sge_lecturas.fecha_hora_registro >= :fecha_hora_inicio and sge_lecturas.fecha_hora_registro <= :fecha_hora_final
+        and sge_medidores.medidor_id = :medidor_id and energia_activa>=0 order by sge_lecturas.fecha_hora_registro asc";
+
+        $count = Yii::$app->db->createCommand($_count)->queryScalar();
+
+
+        $provider = new \yii\data\SqlDataProvider([
+            'sql' => $_sql,
+            'params' => [':medidor_id' => $medidor_id, ':fecha_hora_inicio' => date("Y-m-01") . ' 00:00:01', ':fecha_hora_final' => date("Y-m-d") . ' 24:00:00'],
+            'totalCount' => $count,
+            'pagination' => false
+        ]);
+
+
+
+        if ($provider->getCount() <= 0) {
+            return 0;
+        } else {
+
+            $result = json_decode(json_encode($provider->getModels()));
+
+            $nf = count($result) - 1;
+
+            $total_activa = $result[$nf]->energia_activa - $result[0]->energia_activa;
+            $total_reactiva = $result[$nf]->energia_reactiva - $result[0]->energia_reactiva;
+            $ultimafecha = $result[$nf]->fecha_hora_registro;
+            $valorcto = $result[$nf]->valorkWh;
+            $maxactivadia = $result[$nf]->maxactivadia;
+            $imgasociada = $result[$nf]->imagenasociada;
+
+            return ['Total_activa' => round($total_activa, 2), 'Total_reactiva' =>  round($total_reactiva,2), 'Ultima_fecha' => $ultimafecha, 'Valor_cto' => $valorcto, 'Maxactiva' => $maxactivadia, 'Imagenasociada' => $imgasociada];
+        }
+    }
+
+
+    // Busqueda para grafica de mes
+
+    public function actionSearchmesgrafica()
+    {
+        $post = \Yii::$app->request->rawBody;
+        $recp_json = json_decode($post, true);
+
+        $medidor_id = $recp_json['circuito_id'];
+        $fecha = date("Y-m-d", strtotime(date("Y-m-d") . "+ 1 month"));
+
+
+        $objvalor = [];
+
+        for ($i = 1; $i <= 4; $i++) {
+            $fecha = date("Y-m-d", strtotime($fecha . "- 1 month"));
+
+
+            $_count = "SELECT count(*) from sge_medidores left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id where (sge_lecturas.fecha_hora_registro >= '" . date("Y-m-01", strtotime($fecha)) . "' and sge_lecturas.fecha_hora_registro <= '" . date("Y-m-t", strtotime($fecha)) . "') and sge_medidores.medidor_id = " . $medidor_id . "  and energia_activa>0";
+
+            $_sql = " SELECT *
+        from sge_medidores
+        left join sge_lecturas on sge_lecturas.medidor_id = sge_medidores.medidor_id
+        left join sge_circuitos on sge_circuitos.circuitos_id = sge_medidores.circuito_id
+        where sge_lecturas.fecha_hora_registro >= :fecha_hora_inicio and sge_lecturas.fecha_hora_registro <= :fecha_hora_final
+        and sge_medidores.medidor_id = :medidor_id and energia_activa>=0 order by sge_lecturas.fecha_hora_registro asc";
+
+
+            $count = Yii::$app->db->createCommand($_count)->queryScalar();
+
+
+            $provider = new \yii\data\SqlDataProvider([
+                'sql' => $_sql,
+                'params' => [':medidor_id' => $medidor_id, ':fecha_hora_inicio' => date("Y-m-01", strtotime($fecha)) . ' 00:00:01', ':fecha_hora_final' => date("Y-m-t", strtotime($fecha)) . ' 24:00:00'],
+                'totalCount' => $count,
+                'pagination' => false
+            ]);
+
+            if ($provider->getCount() <= 0) {
+                // return 'No hay datos.';
+                $objvalor['Fechas'][] = date("Y-m", strtotime($fecha));
+                $objvalor['Costos'][] = 0;
+            } else {
+
+                // $objresult[$i][date("Y-m", strtotime($fecha))] = json_decode(json_encode($provider->getModels()));
+
+                $result = json_decode(json_encode($provider->getModels()));
+                // print_r($result);
+                $nf = count($result) - 1;
+
+                $total_activa = $result[$nf]->energia_activa - $result[0]->energia_activa;
+                $valorcto = $result[$nf]->valorkWh;
+
+                $objvalor['Fechas'][] = date("Y-m", strtotime($fecha));
+                $objvalor['Costos'][] = ($valorcto * $total_activa);
+            }
+        }
+
+        return $objvalor;
+    }
+
+    public function actionInsertar()
+    {
+
+        $post = \Yii::$app->request->rawBody;
+        $recp_json = json_decode($post, true);
+        $medidores = Yii::$app->db->createCommand("SELECT sge_concentradores.concentrador_id,sge_medidores.medidor_id,sge_medidores.modbusposition from sge_medidores
+        left join sge_circuitos ON sge_circuitos.circuitos_id = sge_medidores.circuito_id
+        left join sge_concentradores ON sge_concentradores.concentrador_id = sge_circuitos.concentrador_id")->queryAll();
+
+        $medidoresobj = [];
+        $data = [];
+
+
+        foreach ($medidores as $key => $value) {
+            $medidoresobj[$value['concentrador_id']][$value['modbusposition']] = [$value['medidor_id']];
+        }
+
+        
+        $modbus = 0;
+        $concentrador_id = 0;
+        $alias = 0;
+        $fecha = '';
+        $response = [];
+        $res_obj = [];
+        for ($i = 0; $i < count($recp_json); $i++) {
+
+            $modbus = $recp_json[$i]['modbus'];
+            $concentrador_id = $recp_json[$i]['id_concentrador'];
+            $alias = $recp_json[$i]['circuito'];
+            $fecha = $recp_json[$i]['fecha_hora'];
+            
+            if (!isset($medidoresobj[$concentrador_id][$modbus])) {
+                
+                $res_obj[] = $this->validar_datos($fecha, $modbus, $concentrador_id, 'Medidor no encontrado en db.', 1, 'A003', $alias);
+            } else {
+
+                if (date('Y-m-d H:i:s', strtotime($recp_json[$i]['fecha_hora'])) != $recp_json[$i]['fecha_hora']) {
+
+                    $res_obj[] = $this->validar_datos($fecha, $modbus, $concentrador_id, 'Formato de fecha incorrecto.', 3, 'A004', $alias);
+                } else if (strtotime($recp_json[$i]['fecha_hora']) > strtotime(date('Y-m-d H:i:s'))) {
+
+                    $res_obj[] = $this->validar_datos($fecha, $modbus, $concentrador_id, 'La fecha de registros es superior a la actual.', 2, 'A004', $alias);
+                } else if ($recp_json[$i]['tensionfaseA'] < 0) {
+
+                    $res_obj[] = $this->validar_datos($fecha, $modbus, $concentrador_id, 'Medida de tension con valores negativos.', 4, 'A002', $alias);
+
+                } else {
+
+                    $recp_json[$i]['id_sitio'] = $medidoresobj[$concentrador_id][$modbus][0];
+                    foreach ($recp_json[$i] as $key => $value) {
+                        if ($key != 'modbus' && $key != 'circuito' && $key != 'id_concentrador')
+                            $data[$i][] = $value;
+                    }
+                }
+            }
+        }
+
+        if (count($res_obj) > 0) {
+            $response[0]['Errores'] = $res_obj;
+        }else{
+            $response[0]['Errores'] = '';
+        }
+        // die();
+        if (count($data) > 0) {
+            try {
+
+                Yii::$app->db->createCommand()->batchInsert('sge_lecturas', ['fecha_hora_registro', 'medidor_id', 'tensionfaseA', 'tensionfaseB', 'tensionfaseC', 'corrientefaseA', 'corrientefaseB', 'corrientefaseC', 'activainsfaseA', 'activainsfaseB', 'activainsfaseC', 'reactivainstotal', 'activainstotal', 'estado_rele', 'energia_activa', 'energia_reactiva', 'fpfaseA', 'fpfaseB', 'fpfaseC', 'frecuencia'], $data)->execute();
+
+                $response[1]['Confirmaciones'] = "A001";
+                
+            } catch (Exception $ex) {
+                // throw new \yii\web\HttpException(400, 'Error ' . $ex);
+                $response[1]['Confirmaciones'] = 'Error, Sin Datos!!';
+            }
+        } else {
+            // throw new \yii\web\HttpException(400, 'No se tienen datos para ingresar');
+            $response[1]['Confirmaciones'] = "Error No Guardo";
+        }
+
+        return $response;
+    }
+
+    private function validar_datos($fecha, $modbus, $concentrador_id, $mensaje, $t_alerta, $code, $alias)
+    {
+
+        $alarmas = new \app\models\SgeAlarmas();
+        $alarmas->modbusposition = $modbus;
+        $alarmas->concentrador_id = $concentrador_id;
+        $alarmas->descripcion = $mensaje;
+        $alarmas->tipoalarma_id = $t_alerta;
+
+        if ($alarmas->save()) {
+            return ['FechaHora' => $fecha, 'Concentrador' => $concentrador_id, 'Circuito' => $alias, 'Modbus' => $modbus, 'Codigo' => $code];
+        } else {
+            return 'No Guardo';
+        }
+    }
+
+    public function actionSearchuser()
+    {
+        $post = \Yii::$app->request->rawBody;
+        $recp_json = json_decode($post, true);
+
+        $user = $recp_json['user'];
+        $pass = $recp_json['pass'];
+
+        $check_user = \app\api\modules\v1\models\SgeSureusuarios::find()->where(['nombre_usuario' => $user])->one();
+
+        if ($check_user) {
+            if (Yii::$app->getSecurity()->validatePassword($pass, $check_user->serwmpskey)) {
+                $lecturas = \app\api\modules\v1\models\SgeLecturas::find()->where(['medidor_id' => $check_user->medidor_id])->all();
+                return [true, $check_user->medidor_id, $check_user->nombre_usuario, count($lecturas)];
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+}

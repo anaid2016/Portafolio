@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="51.405788mm"
+   height="54.93222mm"
+   viewBox="0 0 51.405789 54.932221"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="txt02.svg">
+  <defs
+     id="defs2">
+    <path
+       style="opacity:0.247;fill:#006600;fill-opacity:1;stroke:none;stroke-width:0.13986285;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1107-6"
+       sodipodi:type="arc"
+       sodipodi:cx="8.9731417"
+       sodipodi:cy="-193.08827"
+       sodipodi:rx="17.669855"
+       sodipodi:ry="16.586912"
+       sodipodi:start="0"
+       sodipodi:end="6.2037903"
+       sodipodi:open="true"
+       d="m 26.642997,-193.08827 a 17.669855,16.586912 0 0 1 -17.3191538,16.58364 17.669855,16.586912 0 0 1 -18.0066356,-15.92536 17.669855,16.586912 0 0 1 16.604382,-17.2158 17.669855,16.586912 0 0 1 18.6657444,15.24198"
+       transform="matrix(-0.97031334,0.24185124,-0.26344872,-0.9646734,0,0)" />
+    <path
+       style="opacity:0.247;fill:#006600;fill-opacity:1;stroke:none;stroke-width:0.78803414;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1191"
+       sodipodi:type="arc"
+       sodipodi:cx="-97.98333"
+       sodipodi:cy="-123.32205"
+       sodipodi:rx="59.53125"
+       sodipodi:ry="59.53125"
+       sodipodi:start="0"
+       sodipodi:end="6.2037903"
+       sodipodi:open="true"
+       d="m -38.45208,-123.32205 a 59.53125,59.53125 0 0 1 -58.349706,59.519522 59.53125,59.53125 0 0 1 -60.665894,-57.156902 59.53125,59.53125 0 0 1 55.94158,-61.78836 59.53125,59.53125 0 0 1 62.886489,54.70422"
+       transform="rotate(-176.12555)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="-133.02381"
+     inkscape:cy="91.788299"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-center="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.502301,-49.393886)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#006600;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="text1195"
+       x="-6.6469007"
+       y="-19.859367"
+       transform="rotate(115.88615,73.384257,103.10588)"><textPath
+         xlink:href="#path1191"
+         id="textPath1197"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#006600;fill-opacity:1;stroke-width:0.26458332"
+   id="tspan1193">   Consumo Mensual</tspan></textPath></text>
+  </g>
+</svg>
