@@ -2,8 +2,8 @@
 
 #Demo
 
-Video:
-URL:
+Video: https://youtu.be/AW67lsjGCGk
+URL: http://18.223.105.203:8086/development/speechapi/web/index.php
 
 
 
